@@ -1,15 +1,19 @@
 import { Outlet } from "react-router-dom"
-import { Container, Content } from "../../components"
+import { Container, Main, Content } from "../../components"
 
 
 export function Home () {
     return (
         <Container>
-            Home
-            
-            <Content>
-                <Outlet />
-            </Content>
+            <Main>
+                Main
+
+                <Content>
+                    Content
+
+                    <Outlet />
+                </Content>
+            </Main>
         </Container>
     )
 }
