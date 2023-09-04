@@ -1,7 +1,13 @@
+import { RouterProvider } from "react-router-dom"
+import { routers } from "./routes"
+
 
 function App() {
 	return (
-		<div>Time clock</div>
+		<RouterProvider
+			router={routers}
+			fallbackElement={<p>Initial Load...</p>}
+		/>
 	)
 }
 
