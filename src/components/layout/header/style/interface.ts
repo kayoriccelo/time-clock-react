@@ -1,0 +1,4 @@
+
+export interface StyledHeaderProps {
+    theme: {}
+}
