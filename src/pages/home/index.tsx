@@ -1,8 +1,10 @@
+import { Container } from "../../components"
+
 
 export function Home () {
     return (
-        <div>
+        <Container>
             Home
-        </div>
+        </Container>
     )
 }
