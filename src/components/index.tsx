@@ -1,10 +1,12 @@
 import { Container } from "./layout/container"
-import { Content } from "./layout/content"
 import { Main } from "./layout/main"
+import { Sidebar } from "./layout/sidebar"
+import { Content } from "./layout/content"
 
 
 export {
     Container,
     Main,
+    Sidebar,
     Content
 }
