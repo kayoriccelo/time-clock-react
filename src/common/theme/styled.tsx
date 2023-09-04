@@ -30,6 +30,12 @@ export const theme = {
             font-family: ${fontFamily};
             box-shadow: 0.438rem 0.438rem 0.375rem -0.625rem #797a7a;
         `,
+        footer: `
+            background-color: #1e1e2d;
+            color: white;
+            font-size: 0.8rem;
+            font-family: ${fontFamily};  
+        `,
     },
     dark: {
         background: `
@@ -43,7 +49,19 @@ export const theme = {
             box-shadow: 0.438rem 0.438rem 0.375rem -0.5rem #202a39;
             border-right: 0.063rem solid #202a39;
         `,
-    },
+        footer: `
+            background-color: rgb(28, 30, 39);
+            color: #cdcccc;
+            font-size: ${fontSize};
+            font-family: ${fontFamily};
+        `,
+    }, footer: `
+            background-color: rgb(28, 30, 39);
+            color: #cdcccc;
+            font-size: ${fontSize};
+            font-family: ${fontFamily};
+        `,
+
 }
 
 
