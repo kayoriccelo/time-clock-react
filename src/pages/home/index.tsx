@@ -13,8 +13,6 @@ export function Home() {
                 <Breadcrumb />
 
                 <Content>
-                    Content
-
                     <Outlet />
                 </Content>
 

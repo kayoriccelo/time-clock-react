@@ -8,7 +8,7 @@ export function Breadcrumb () {
 
     return (
         <BreadcrumbStyled theme={theme}>
-            Breadcrumb
+            Home / Employees / Edit
         </BreadcrumbStyled>
     )
 }
