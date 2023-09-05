@@ -10,19 +10,19 @@ export const MenuStyled = styled(Link)<StyledMenuProps>`
     justify-content: space-between;
     padding: 0.8rem;
     margin-bottom: 0.33rem;
-    border-right: 0.25rem solid transparent;
-    border-bottom: 0.25rem solid transparent;
+    border-right: 0.20rem solid #6e6e6e1f;
+    border-bottom: 0.20rem solid #6e6e6e1f;
     border-radius: 0.25rem;
     transition: all .30s ease;
     color: rgba(103, 103, 103, 0.90);
     cursor: pointer;
     text-align: center;
-    
-    &:hover {                
-        border-right: 0.25rem solid #6e6e6e1f;
-        border-bottom: 0.25rem solid #6e6e6e1f;
-        box-shadow: 0.500rem 0.500rem 0.400rem -0.5rem #202a39;
-        
+    text-decoration: none;
+
+    &:hover {             
+        background-color: #eeeded81;   
+        box-shadow: 0.430rem 0.430rem 0.350rem -0.5rem #202a39;
+        color: #1e1e2d;
     }
     
     ${props => props.theme.menu}

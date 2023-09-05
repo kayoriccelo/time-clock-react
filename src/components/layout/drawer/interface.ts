@@ -1,6 +1,7 @@
 
 export interface DrawerProps {
     submenus?: any,
-    open: Boolean,
+    titleMenu?: string,
+    open: boolean,
     handleOpen: (open: boolean) => void,
 }

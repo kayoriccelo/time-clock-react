@@ -11,24 +11,31 @@ export function Sidebar() {
     const { theme } = useContext(ThemeContext)
     const [open, useOpen] = useState(false)
     const [submenus, useSubMenus] = useState([])
+    const [titleMenu, useTitleMenu] = useState('')
 
     function handleOpen(value: boolean) {
         useOpen(value)
     }
 
-    function handleSubMenus(value: any) {
+    function handleSubMenus(title: string, value: any) {
         useSubMenus(value)
+        useTitleMenu(title)
     }
 
     return (
         <>
-            <Drawer open={open} submenus={submenus} handleOpen={handleOpen} />
+            <Drawer 
+                open={open} 
+                titleMenu={titleMenu} 
+                submenus={submenus} 
+                handleOpen={handleOpen} 
+            />
 
             <SidebarStyled theme={theme}>
                 <Menu
-                    title="Dashboard"
+                    title="Home"
                     icon={<MdDashboardCustomize style={{ paddingBottom: 8 }} size={20} />}
-                    to="/dashboard"
+                    to="/"
                     handleOpen={handleOpen}
                 />
 
@@ -36,7 +43,7 @@ export function Sidebar() {
                     title="Registrations"
                     icon={<MdAppRegistration style={{ paddingBottom: 8 }} size={20} />}
                     handleOpen={handleOpen}
-                    handleSubMenus={() => handleSubMenus([{
+                    handleSubMenus={() => handleSubMenus('Registrations', [{
                         title: 'Company',
                         to: '/registrations/company',
                         icon: <BiSolidBusiness style={{ marginRight: 15 }} size={20} />
