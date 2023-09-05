@@ -49,6 +49,29 @@ export const theme = {
             font-size: 0.8rem;
             font-family: ${fontFamily};  
         `,
+        button: {
+            primary: `
+                background-color: ${primaryLight};
+                color: white;
+                font-size: ${fontSize};
+                font-family: ${fontFamily};
+            `,
+            success: `
+                background-color: ${successLight};
+                color: white;
+                font-size: ${fontSize};
+                font-family: ${fontFamily};
+            `,
+            danger: `
+                background-color: ${dangerLight};
+                color: white;
+                font-size: ${fontSize};
+                font-family: ${fontFamily};
+            `,
+            hover: `
+                background: rgba(3, 250, 176, 0.253);
+            `
+        }
     },
     dark: {
         background: `
@@ -82,6 +105,22 @@ export const theme = {
             font-size: ${fontSize};
             font-family: ${fontFamily};
         `,
+        button: {
+            primary: `
+                background-color: ${primaryDark};
+                color: white;
+                font-size: ${fontSize};
+                font-family: ${fontFamily};
+            `,
+            success: `
+                background-color: ${successDark};
+                color: white;
+                font-size: ${fontSize};
+                font-family: ${fontFamily};
+            `,
+            hover: `
+            `
+        }
     }
 }
 

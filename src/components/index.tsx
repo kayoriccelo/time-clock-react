@@ -5,6 +5,7 @@ import { Header } from "./layout/header"
 import { Breadcrumb } from "./layout/breadcrumb"
 import { Content } from "./layout/content"
 import { Footer } from "./layout/footer"
+import { Button } from "./button"
 
 
 export {
@@ -15,4 +16,6 @@ export {
     Breadcrumb,
     Content,
     Footer,
+
+    Button,
 }
