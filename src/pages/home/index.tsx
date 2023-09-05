@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import { Container, Main, Sidebar, Header, Content, Footer } from "../../components"
+import { Container, Main, Sidebar, Header, Breadcrumb, Content, Footer } from "../../components"
 
 
 export function Home() {
@@ -9,6 +9,8 @@ export function Home() {
 
             <Main>
                 <Header />
+
+                <Breadcrumb />
 
                 <Content>
                     Content
