@@ -1,5 +1,4 @@
-const fontFamily = ''
-const fontSize = ''
+const fontFamily = 'Roboto, sans-serif'
 
 const primaryLight = ''
 const successLight = ''
@@ -26,25 +25,29 @@ export const theme = {
         sideBar: `
             background-color: white;
             color: rgb(28, 30, 39);
-            font-size: ${fontSize};
-            font-family: ${fontFamily};
             box-shadow: 0.438rem 0.438rem 0.375rem -0.625rem #797a7a;
         `,
+        menu: `
+            font-family: ${fontFamily};
+        `,
+        submenu: `
+            font-family: ${fontFamily};
+        `,
         header: `
-            background-color: #1e1e2d;
+            background: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
             color: white;
-            font-size: ${fontSize};
+            font-family: ${fontFamily};
+        `,
+        title: `
             font-family: ${fontFamily};
         `,
         breadcrumb: `
-            background-color: white;
             color: rgb(28, 30, 39);
-            font-size: 0.9rem;
+            font-size: 0.7rem;
             font-family: ${fontFamily};
-            box-shadow: 0.438rem 0.438rem 0.375rem -0.625rem #797a7a;
         `,
         footer: `
-            background-color: #1e1e2d;
+            background: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
             color: white;
             font-size: 0.8rem;
             font-family: ${fontFamily};  
@@ -53,19 +56,16 @@ export const theme = {
             primary: `
                 background-color: ${primaryLight};
                 color: white;
-                font-size: ${fontSize};
                 font-family: ${fontFamily};
             `,
             success: `
                 background-color: ${successLight};
                 color: white;
-                font-size: ${fontSize};
                 font-family: ${fontFamily};
             `,
             danger: `
                 background-color: ${dangerLight};
                 color: white;
-                font-size: ${fontSize};
                 font-family: ${fontFamily};
             `,
             hover: `
@@ -80,7 +80,6 @@ export const theme = {
         sideBar: `
             background-color: rgb(28, 30, 39);
             color: #cdcccc;
-            font-size: ${fontSize};
             font-family: ${fontFamily};
             box-shadow: 0.438rem 0.438rem 0.375rem -0.5rem #202a39;
             border-right: 0.063rem solid #202a39;
@@ -88,7 +87,6 @@ export const theme = {
         header: `
             background-color: rgb(28, 30, 39);
             color: #cdcccc;
-            font-size: ${fontSize};
             font-family: ${fontFamily};
         `,
         breadcrumb: `
@@ -102,34 +100,24 @@ export const theme = {
         footer: `
             background-color: rgb(28, 30, 39);
             color: #cdcccc;
-            font-size: ${fontSize};
             font-family: ${fontFamily};
         `,
         button: {
             primary: `
                 background-color: ${primaryDark};
                 color: white;
-                font-size: ${fontSize};
                 font-family: ${fontFamily};
             `,
             success: `
                 background-color: ${successDark};
                 color: white;
-                font-size: ${fontSize};
                 font-family: ${fontFamily};
             `,
             hover: `
             `
-        }
+        },
+        box: `
+            font-family: ${fontFamily};
+        `
     }
-}
-
-
-export const rows = {
-
-}
-
-
-export const cols = {
-
 }

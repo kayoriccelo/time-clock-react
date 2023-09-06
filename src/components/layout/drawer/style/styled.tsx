@@ -14,27 +14,26 @@ export const DrawerStyled = styled.div<StyledDrawerProps>`
     transition: all .60s ease;  
     display: flex;
     opacity: 0;
-    left: 0;
+    left: 8.3rem;
     
     ${props => props.open ? `
         opacity: 1; 
-        width: 15rem;
-        left: 8.3rem; 
+        width: 15rem; 
     ` : `
         opacity: 0;
         width: 0rem;
-        left: 0;
     `}
 `
 
 export const TitleDrawerStyle = styled.div`
     padding: 0.6rem 0.8rem;
     margin-bottom: 0.6rem;
-    background-color: #1e1e2d;
+    background: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
     color: white;
     text-align: center;
     border-top-right-radius: 0.25rem;
     border-top-left-radius: 0.25rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 600;
+    font-family: 'Roboto', sans-serif;
 `

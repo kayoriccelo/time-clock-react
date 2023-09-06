@@ -8,7 +8,8 @@ export const MenuStyled = styled(Link)<StyledMenuProps>`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 0.8rem;
+    padding: 0.2rem;
+    padding-top: 0.5rem;
     margin-bottom: 0.33rem;
     border-right: 0.20rem solid #6e6e6e1f;
     border-bottom: 0.20rem solid #6e6e6e1f;
