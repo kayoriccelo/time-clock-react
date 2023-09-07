@@ -69,8 +69,42 @@ export const theme = {
                 font-family: ${fontFamily};
             `,
             hover: `
-                background: rgba(3, 250, 176, 0.253);
+                background: #71bc78a6;
             `
+        },
+        box: ``,
+        label: {
+            title: `
+                font-family: ${fontFamily};
+            `,
+            value: `
+                font-family: ${fontFamily};
+            `
+        },
+        tab: {
+            nav: `
+                font-family: ${fontFamily};
+                border-bottom: 1px solid transparent;
+
+                &:hover {
+                    font-weight: 600;
+                    border-bottom-width: 1px;
+                    border-bottom-style: solid;
+                    border-bottom-color: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
+                }
+            `,
+            active: `
+                font-weight: 600;
+                background: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
+                color: #eeedede2;
+            `,
+            content: ``,
+            group: ``,
+        },
+        detail: {
+            header: ``,
+            actions: ``,
+            content: ``,
         }
     },
     dark: {
@@ -118,6 +152,19 @@ export const theme = {
         },
         box: `
             font-family: ${fontFamily};
-        `
+        `,
+        label: {
+            title: `
+                font-family: ${fontFamily};
+            `,
+            value: `
+                font-family: ${fontFamily};
+            `
+        },
+        tab: {
+            nav: ``,
+            content: ``,
+            group: ``,
+        }
     }
 }

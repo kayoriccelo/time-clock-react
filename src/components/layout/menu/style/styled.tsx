@@ -19,6 +19,8 @@ export const MenuStyled = styled(Link)<StyledMenuProps>`
     cursor: pointer;
     text-align: center;
     text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 600;
 
     &:hover {             
         background-color: #eeeded81;   
