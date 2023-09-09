@@ -1,12 +1,9 @@
-import { ReactNode } from "react"
-
 
 export interface IGlobal {
 	title: string,
 	breadcrumbs: Array<{
         to: string,
-		title: string,
-		icon: ReactNode
+		title: string
 	}>,
 	theme: {},
 }

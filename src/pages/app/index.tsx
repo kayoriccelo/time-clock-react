@@ -1,21 +1,23 @@
-import { useCallback, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 import { RouterProvider } from "react-router-dom"
-import { MdDashboardCustomize } from "react-icons/md"
 
 import { routers } from "./routes"
 import { style } from "../../common/theme/styled"
 import { IGlobal } from "./interface"
-import { GlobalContext } from "./contexts"
+import { GlobalContext } from "./context"
+import { getLocalStorage, setLocalStorage } from "./storage"
 
 
 function App() {
 	const [global, useGlobal] = useState<IGlobal>({
 		title: 'Home',
-		breadcrumbs: [{ to: '/', title: 'Home', icon: <MdDashboardCustomize /> }],
+		breadcrumbs: [{ to: '/', title: 'Home'}],
 		theme: style.light
 	})
 
-	const handlerGlobal = useCallback((newGlobal: {}) => {
+	const handlerGlobal = useCallback((newGlobal: IGlobal) => {
+		setLocalStorage(newGlobal)
+
 		useGlobal({ ...global, ...newGlobal })
 	}, [])
 
@@ -23,6 +25,14 @@ function App() {
 		global,
 		handlerGlobal
 	}), [global])
+
+	useEffect(() => {
+		const newGlobal = getLocalStorage(global)
+		
+		setLocalStorage(newGlobal)
+
+		useGlobal(newGlobal)
+	}, [])
 
 	return (
 		<GlobalContext.Provider value={value}>
