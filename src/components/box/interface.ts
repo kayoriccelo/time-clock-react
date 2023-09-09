@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 
 
-export interface BoxProps {
+export interface IBox {
     children?: ReactNode
 }

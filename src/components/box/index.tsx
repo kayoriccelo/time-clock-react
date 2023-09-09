@@ -1,15 +1,17 @@
 import { useContext } from "react"
-import { BoxProps } from "./interface"
-import { StyledBox } from "./style/styled"
-import ThemeContext from "../../pages/app/contexts"
+
+import { IBox } from "./interface"
+import { SBox } from "./style/styled"
+import { GlobalContext } from "../../pages/app/context"
 
 
-export function Box({ children }: BoxProps) {
-    const { theme } = useContext(ThemeContext)
+export function Box({ children }: IBox) {
+    const { global } = useContext(GlobalContext)
+    const { theme } = global
 
     return (
-        <StyledBox theme={theme}>
+        <SBox theme={theme}>
             {children}
-        </StyledBox>
+        </SBox>
     )
 }

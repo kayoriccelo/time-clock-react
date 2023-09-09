@@ -1,8 +1,9 @@
 import { styled } from "styled-components"
-import { StyledBoxProps } from "./interface"
+
+import { ISBox } from "./interface"
 
 
-export const StyledBox = styled.span<StyledBoxProps>`
+export const SBox = styled.span<ISBox>`
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
