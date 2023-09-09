@@ -1,7 +1,6 @@
 import { createContext } from 'react'
 
+import { IGlobalContext } from './interface'
 
-const ThemeContext = createContext({theme: {}})
 
-
-export default ThemeContext
+export const GlobalContext = createContext({} as IGlobalContext)
