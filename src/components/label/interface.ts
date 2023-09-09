@@ -1,9 +1,8 @@
 import { ReactNode } from "react"
 
 
-export interface LabelProps {
+export interface ILabel {
     children?: ReactNode,
     size?: number | string,
-    is_title?: boolean,
-    is_value?: boolean
+    is_title?: boolean
 }
