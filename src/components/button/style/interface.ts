@@ -1,5 +1,5 @@
 
-export interface StyledButtonProps {
+export interface ISButton {
     theme: {},
     type?: string,
 }
