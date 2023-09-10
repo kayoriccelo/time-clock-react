@@ -16,11 +16,10 @@ export const SBreadcrumb = styled.div<ISBreadcrumb>`
 export const SBreadcrumbIcon = styled.span` 
     display: flex; 
     align-items: center;
-    padding: 0.25rem;
 `
 
 export const SBreadcrumbLabel = styled.span` 
     display: flex; 
     align-items: center;
-    padding: 0.25rem;
+    padding: 0.15rem;
 `
