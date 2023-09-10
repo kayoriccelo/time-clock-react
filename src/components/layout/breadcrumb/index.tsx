@@ -13,13 +13,13 @@ export function Breadcrumb() {
         <SBreadcrumb theme={theme}>
             {breadcrumbs && breadcrumbs.map((breadcrumb, index) => {
                 return (
-                    <>
-                        <SBreadcrumbLabel>
+                    <div key={`bf-${index}`}>
+                        <SBreadcrumbLabel key={`sb-label-${index}`}>
                             {breadcrumb.title}
                         </SBreadcrumbLabel>
 
-                        {index == breadcrumbs.length && <SBreadcrumbIcon><TbPointFilled/></SBreadcrumbIcon>}
-                    </>
+                        {index == breadcrumbs.length && <SBreadcrumbIcon key={`sb-icon-${index}`}><TbPointFilled key={`b-icon-${index}`}/></SBreadcrumbIcon>}
+                    </div>
                 )
             })}
         </SBreadcrumb>
