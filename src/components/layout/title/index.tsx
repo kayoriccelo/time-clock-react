@@ -1,15 +1,16 @@
 import { useContext } from "react"
-import { TitleStyled } from "./style/styled"
-import { TitleProps } from "./interface"
-import ThemeContext from "../../../pages/app/contexts"
+
+import { STitle } from "./style/styled"
+import { GlobalContext } from "../../../pages/app/context"
 
 
-export function Title (props: TitleProps) {
-    const { theme } = useContext(ThemeContext)
+export function Title () {
+    const { global } = useContext(GlobalContext)
+    const { theme, title } = global
 
     return (
-        <TitleStyled theme={theme} {...props}>
-            {props.children}
-        </TitleStyled>
+        <STitle theme={theme}>
+            {title}
+        </STitle>
     )
 }
