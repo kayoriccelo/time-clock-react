@@ -1,21 +1,20 @@
 import { styled } from "styled-components"
-import { 
-    StyledTabGroupProps, StyledTabNavProps, StyledTabContentProps 
-} from "./interface"
+
+import { ISTabGroup, ISTabNav, ISTabContent } from "./interface"
 
 
-export const StyledTab = styled.div`
+export const STab = styled.div`
     
 `
 
-export const StyledTabGroup = styled.div<StyledTabGroupProps>`
+export const STabGroup = styled.div<ISTabGroup>`
     display: flex;
     margin-bottom: 0.6rem;
 
     ${props => props.theme.tab.group}
 `
 
-export const StyledTabNav = styled.button<StyledTabNavProps>`
+export const STabNav = styled.button<ISTabNav>`
     display: flex;
     align-items: center;
     height: 2rem;
@@ -31,14 +30,13 @@ export const StyledTabNav = styled.button<StyledTabNavProps>`
     ${props => props.active && props.theme.tab.active}
 `
 
-export const StyledTabIcon = styled.span`
+export const STabIcon = styled.span`
     padding: 0 0.3rem;
 `
 
-export const StyledTabContent = styled.div<StyledTabContentProps>`
+export const STabContent = styled.div<ISTabContent>`
     display: ${props => props.active ? 'flex' : 'none'};
     background-color: white;
 
     ${props => props.theme.tab.content}
-    
 `

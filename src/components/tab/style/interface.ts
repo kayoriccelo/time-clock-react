@@ -1,15 +1,15 @@
 
-export interface StyledTabGroupProps {
+export interface ISTabGroup {
     theme: {},
 }
 
-export interface StyledTabNavProps {
+export interface ISTabNav {
     active: boolean,
     theme: {},
     onClick: (event: any, newValue: string) => void,
 }
 
-export interface StyledTabContentProps {
+export interface ISTabContent {
     active: boolean,
     theme: {},
 }

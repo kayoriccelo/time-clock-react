@@ -1,30 +1,30 @@
 import { ReactNode } from "react"
 
-interface TabsProps {
+
+interface ITabItem {
     tab: string,
     label: string,
     icon: ReactNode,
     content: ReactNode,
 }
 
-
-export interface TabProps {
-    tabs: Array<TabsProps>,
+export interface ITab {
+    tabs: Array<ITabItem>,
     tabActiveInitial: string,
 }
 
-export interface TabGroupProps {
+export interface ITabGroup {
     theme: {}
 }
 
-export interface TabNavProps {
+export interface ITabNav {
     children: ReactNode,   
     active: boolean,
-    handleChange: () => void,
+    handlerChange: () => void,
 }
 
 
-export interface TabContentProps {
+export interface ITabContent {
     children: ReactNode,
     active: boolean,
 }

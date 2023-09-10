@@ -1,63 +1,65 @@
 import { useContext, useEffect, useState } from "react"
-import { 
-    StyledTab, StyledTabNav, StyledTabContent, StyledTabGroup, StyledTabIcon 
-} from "./style/styled"
-import ThemeContext from "../../pages/app/contexts"
-import { TabContentProps, TabNavProps, TabProps } from "./interface"
+
+import { STab, STabContent, STabGroup, STabIcon, STabNav } from "./style/styled"
+import { ITabContent, ITabNav, ITab } from "./interface"
+import { GlobalContext } from "../../pages/app/context"
 
 
-export function Tab({ tabs, tabActiveInitial }: TabProps) {
-    const { theme } = useContext(ThemeContext)
+export function Tab({ tabs, tabActiveInitial }: ITab) {
+    const { global } = useContext(GlobalContext)
+    const { theme } = global
     const [tabActive, useTabActive] = useState('')
 
     useEffect(() => {
         tabActiveInitial && useTabActive(tabActiveInitial)
     }, [])
 
-    function handleChange(newValue: string) {
+    function handlerChange(newValue: string) {
         useTabActive(newValue)
     }
 
     return (
-        <StyledTab theme={theme}>
-            <StyledTabGroup theme={theme}>
+        <STab theme={theme}>
+            <STabGroup theme={theme}>
                 {tabs.map(item => (
                     <TabNav
                         active={item.tab === tabActive}
-                        handleChange={() => handleChange(item.tab)}
+                        handlerChange={() => handlerChange(item.tab)}
                     >
-                        {item.icon && item.icon} <StyledTabIcon>{item.label}</StyledTabIcon>
+                        {item.icon && item.icon} <STabIcon>{item.label}</STabIcon>
                     </TabNav>
                 ))}
-            </StyledTabGroup>
+            </STabGroup>
 
-            <StyledTabGroup theme={theme}>
+            <STabGroup theme={theme}>
                 {tabs.map(item => (
                     <TabContent active={item.tab === tabActive}>
                         {item.content}
                     </TabContent>
                 ))}
-            </StyledTabGroup>
-        </StyledTab>
+            </STabGroup>
+        </STab>
     )
 }
 
-export function TabNav({ children, active, handleChange }: TabNavProps) {
-    const { theme } = useContext(ThemeContext)
+export function TabNav({ children, active, handlerChange }: ITabNav) {
+    const { global } = useContext(GlobalContext)
+    const { theme } = global
 
     return (
-        <StyledTabNav theme={theme} active={active} onClick={handleChange}>
+        <STabNav theme={theme} active={active} onClick={handlerChange}>
             {children}
-        </StyledTabNav>
+        </STabNav>
     )
 }
 
-export function TabContent({ children, active }: TabContentProps) {
-    const { theme } = useContext(ThemeContext)
+export function TabContent({ children, active }: ITabContent) {
+    const { global } = useContext(GlobalContext)
+    const { theme } = global
 
     return (
-        <StyledTabContent theme={theme} active={active}>
+        <STabContent theme={theme} active={active}>
             {children}
-        </StyledTabContent>
+        </STabContent>
     )
 }
