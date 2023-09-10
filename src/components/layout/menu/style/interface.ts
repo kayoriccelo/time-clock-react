@@ -1,5 +1,5 @@
 
-export interface StyledMenuProps {
+export interface ISMenu {
     theme: {},
     to?: string,
 }

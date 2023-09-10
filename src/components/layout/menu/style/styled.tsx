@@ -1,9 +1,10 @@
 import { styled } from "styled-components"
-import { StyledMenuProps } from "./interface"
 import { Link } from "react-router-dom"
 
+import { ISMenu } from "./interface"
 
-export const MenuStyled = styled(Link)<StyledMenuProps>`
+
+export const SMenu = styled(Link)<ISMenu>`
     display: flex;
     flex-direction: column;
     align-items: center;

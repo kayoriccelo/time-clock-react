@@ -1,17 +1,22 @@
 import { useContext } from "react"
-import { MenuProps } from "./interface"
-import { MenuStyled } from "./style/styled"
-import ThemeContext from "../../../pages/app/contexts"
+
+import { IMenu } from "./interface"
+import { SMenu } from "./style/styled"
+import { GlobalContext } from "../../../pages/app/context"
 
 
-export function Menu({ title, icon, to, open, handleOpen, handleSubMenus }: MenuProps) {
-    const { theme } = useContext(ThemeContext)
-
+export function Menu({ title, icon, to, open, breadcrumbs, handleOpen, handleSubMenus }: IMenu) {
+    const { global, handlerGlobal } = useContext(GlobalContext)
+    const { theme } = global
 
     function handleClick() {
         if (to) {
             handleOpen && handleOpen(false)
-        } else {    
+
+            handlerGlobal({ 
+                ...global, title: title, breadcrumbs: breadcrumbs ? breadcrumbs: global.breadcrumbs 
+            })
+        } else {
             handleOpen && handleOpen(!open)
 
             handleSubMenus && handleSubMenus()
@@ -19,10 +24,10 @@ export function Menu({ title, icon, to, open, handleOpen, handleSubMenus }: Menu
     }
 
     return (
-        <MenuStyled to={to} theme={theme} onClick={() => handleClick()}>
+        <SMenu to={to} theme={theme} onClick={() => handleClick()}>
             {icon && icon}
 
-            {icon && title}
-        </MenuStyled>
+            {title && title}
+        </SMenu>
     )
 }

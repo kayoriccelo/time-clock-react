@@ -1,11 +1,14 @@
 import { ReactNode } from "react"
 
+import { IBreadcrumb } from "../breadcrumb/interface"
 
-export interface MenuProps {
-    title?: string,
-    icon?: ReactNode,
+
+export interface IMenu {
+    title: string,
+    icon: ReactNode,
     to?: string,
-    open?: boolean,
+    open: boolean,
+    breadcrumbs?: Array<IBreadcrumb>,
     handleOpen?: (open: boolean) => void,
     handleSubMenus?: () => void,
     submenus?: any
