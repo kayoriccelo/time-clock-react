@@ -1,7 +1,7 @@
 import { useContext } from "react"
 
 import { IMenu } from "./interface"
-import { SMenu } from "./style/styled"
+import { SMenuLink, SMenuButton } from "./style/styled"
 import { GlobalContext } from "../../../pages/app/context"
 
 
@@ -13,8 +13,8 @@ export function Menu({ title, icon, to, open, breadcrumbs, handleOpen, handleSub
         if (to) {
             handleOpen && handleOpen(false)
 
-            handlerGlobal({ 
-                ...global, title: title, breadcrumbs: breadcrumbs ? breadcrumbs: global.breadcrumbs 
+            handlerGlobal({
+                ...global, title: title, breadcrumbs: breadcrumbs ? breadcrumbs : global.breadcrumbs
             })
         } else {
             handleOpen && handleOpen(!open)
@@ -24,10 +24,18 @@ export function Menu({ title, icon, to, open, breadcrumbs, handleOpen, handleSub
     }
 
     return (
-        <SMenu to={to} theme={theme} onClick={() => handleClick()}>
-            {icon && icon}
+        to ? (
+            <SMenuLink to={to} theme={theme} onClick={() => handleClick()}>
+                {icon && icon}
 
-            {title && title}
-        </SMenu>
+                {title && title}
+            </SMenuLink>
+        ) : (
+            <SMenuButton theme={theme} onClick={() => handleClick()}>
+                {icon && icon}
+
+                {title && title}
+            </SMenuButton>
+        )
     )
 }
