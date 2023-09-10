@@ -1,5 +1,5 @@
 
-export interface StyledSubMenuProps {
+export interface ISSubMenu {
     theme: {},
     to?: string
 }

@@ -1,21 +1,25 @@
 import { useContext } from "react"
-import ThemeContext from "../../../pages/app/contexts"
-import { SubMenuProps } from "./interface"
-import { SubMenuStyled } from "./style/styled"
+
+import { GlobalContext } from "../../../pages/app/context"
+import { ISubMenu } from "./interface"
+import { SSubMenu } from "./style/styled"
 
 
-export function SubMenu({ title, to, icon, open, handleOpen }: SubMenuProps) {
-    const { theme } = useContext(ThemeContext)
+export function SubMenu({ title, to, icon, open, breadcrumbs, handleOpen }: ISubMenu) {
+    const { global, handlerGlobal } = useContext(GlobalContext)
+    const { theme } = global
 
     function handleClick() {
         handleOpen && handleOpen(!open)
+
+        handlerGlobal({ ...global, title: title, breadcrumbs: breadcrumbs })
     }
 
     return (
-        <SubMenuStyled to={to} theme={theme} onClick={handleClick}>
+        <SSubMenu to={to} theme={theme} onClick={handleClick}>
             {icon && icon}
 
-            {icon && title}
-        </SubMenuStyled>
+            {title && title}
+        </SSubMenu>
     )
 }

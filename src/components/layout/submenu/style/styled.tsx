@@ -1,9 +1,10 @@
 import { styled } from "styled-components"
-import { StyledSubMenuProps } from "./interface"
 import { Link } from "react-router-dom"
 
+import { ISSubMenu } from "./interface"
 
-export const SubMenuStyled = styled(Link)<StyledSubMenuProps>`
+
+export const SSubMenu = styled(Link)<ISSubMenu>`
     display: flex;
     align-items: center;
     padding: 0.2rem 0.4rem;
