@@ -1,15 +1,17 @@
 import { useContext } from "react"
-import { MainProps } from "./interface"
-import { MainStyled } from "./style/styled"
-import ThemeContext from "../../../pages/app/contexts"
+
+import { IMain } from "./interface"
+import { SMain } from "./style/styled"
+import { GlobalContext } from "../../../pages/app/context"
 
 
-export function Main (props: MainProps) {
-    const { theme } = useContext(ThemeContext)
+export function Main({ children }: IMain) {
+    const { global } = useContext(GlobalContext)
+    const { theme } = global
 
     return (
-        <MainStyled theme={theme} {...props}>
-            {props.children}
-        </MainStyled>
+        <SMain theme={theme}>
+            {children}
+        </SMain>
     )
 }

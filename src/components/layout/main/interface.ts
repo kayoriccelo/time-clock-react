@@ -1,5 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode } from "react"
 
-export interface MainProps {
+
+export interface IMain {
     children: ReactNode 
 }
