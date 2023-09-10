@@ -44,7 +44,7 @@ export function Sidebar() {
                     icon={<MdDashboardCustomize style={{ paddingBottom: 8 }} size={18} />}
                     to="/"
                     breadcrumbs={[
-                        { to: '/', title: 'Home', icon: <MdDashboardCustomize /> },
+                        { to: '/', title: 'Home'},
                     ]}
                     open={open}
                     handleOpen={handleOpen}
@@ -60,7 +60,7 @@ export function Sidebar() {
                         to: '/registrations/company/detail',
                         icon: <BiSolidBusiness style={{ marginRight: 40 }} size={18} />,
                         breadcrumbs: [
-                            { to: '/', title: 'Home', icon: <MdDashboardCustomize /> }
+                            { to: '/', title: 'Home'}
                         ]
                     }])}
                 />
@@ -70,7 +70,7 @@ export function Sidebar() {
                     icon={<MdFingerprint style={{ paddingBottom: 8 }} size={18} />}
                     to='/point_marking'
                     breadcrumbs={[
-                        { to: '/', title: 'Home', icon: <MdDashboardCustomize /> },
+                        { to: '/', title: 'Home'}
                     ]}
                     open={open}
                     handleOpen={handleOpen}
