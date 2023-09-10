@@ -8,7 +8,7 @@ export const SLabel = styled.label<ISLabel>`
     
     ${props => props.size && `font-size: ${props.size}rem;`}
     ${props => props.theme.label}
-    ${props => props.is_title && `
+    ${props => props.type == 'title' && `
         font-weight: 900;
         ${props.theme.label.title}
     `}

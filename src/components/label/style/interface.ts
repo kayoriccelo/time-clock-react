@@ -1,6 +1,6 @@
 
 export interface ISLabel {
     theme: {},
-    is_title?: boolean,
+    type: 'title' | 'value',
     size?: number | string,
 }
