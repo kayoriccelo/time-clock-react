@@ -1,4 +1,4 @@
 
-export interface StyledHeaderProps {
+export interface ISHeader {
     theme: {}
 }

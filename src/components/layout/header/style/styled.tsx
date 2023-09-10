@@ -1,6 +1,9 @@
-import { styled } from "styled-components";
+import { styled } from "styled-components"
 
-export const HeaderStyled = styled.div` 
+import { ISHeader } from "./interface"
+
+
+export const SHeader = styled.div<ISHeader>` 
     margin: 0.6rem 0 0.6rem 0;
     padding: 0.4rem;
     box-shadow: 0.438rem 0.438rem 0.375rem -0.5rem #202a39;

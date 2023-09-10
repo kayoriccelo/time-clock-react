@@ -1,19 +1,20 @@
 import { useContext } from "react"
-import { HeaderProps } from "./interface"
-import { HeaderStyled } from "./style/styled"
-import { Button } from "../../button"
 import { TiThMenu } from "react-icons/ti"
-import ThemeContext from "../../../pages/app/contexts"
+
+import { SHeader } from "./style/styled"
+import { Button } from "../../button"
+import { GlobalContext } from "../../../pages/app/context"
 
 
-export function Header(props: HeaderProps) {
-    const { theme } = useContext(ThemeContext)
+export function Header() {
+    const { global } = useContext(GlobalContext)
+    const { theme } = global
 
     return (
-        <HeaderStyled theme={theme} {...props}>
+        <SHeader theme={theme}>
             <Button>
                 <TiThMenu size={20} />
             </Button>
-        </HeaderStyled>
+        </SHeader>
     )
 }
