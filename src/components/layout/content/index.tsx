@@ -1,10 +1,11 @@
-import { ContentProps } from "./interface"
-import { ContentStyled } from "./style/styled"
+import { IContent } from "./interface"
+import { SContent } from "./style/styled"
 
-export function Content (props: ContentProps) {
+
+export function Content (props: IContent) {
     return (
-        <ContentStyled>
+        <SContent>
             {props.children}
-        </ContentStyled>
+        </SContent>
     )
 }

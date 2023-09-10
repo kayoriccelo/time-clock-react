@@ -1,5 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode } from "react"
 
-export interface ContentProps {
+
+export interface IContent {
     children: ReactNode 
 }
