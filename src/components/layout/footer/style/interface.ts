@@ -1,4 +1,4 @@
 
-export interface StyledFooterProps {
+export interface ISFooter {
     theme: {}
 }
