@@ -1,14 +1,27 @@
 import { useContext } from "react"
-import { BreadcrumbStyled } from "./style/styled"
-import ThemeContext from "../../../pages/app/contexts"
+import { TbPointFilled } from "react-icons/tb"
+
+import { SBreadcrumb, SBreadcrumbIcon, SBreadcrumbLabel } from "./style/styled"
+import { GlobalContext } from "../../../pages/app/context"
 
 
-export function Breadcrumb () {
-    const { theme } = useContext(ThemeContext)
+export function Breadcrumb() {
+    const { global } = useContext(GlobalContext)
+    const { theme, breadcrumbs } = global
 
     return (
-        <BreadcrumbStyled theme={theme}>
-            Home / Employees / Edit
-        </BreadcrumbStyled>
+        <SBreadcrumb theme={theme}>
+            {breadcrumbs && breadcrumbs.map((breadcrumb, index) => {
+                return (
+                    <>
+                        <SBreadcrumbLabel>
+                            {breadcrumb.title}
+                        </SBreadcrumbLabel>
+
+                        {index == breadcrumbs.length && <SBreadcrumbIcon><TbPointFilled/></SBreadcrumbIcon>}
+                    </>
+                )
+            })}
+        </SBreadcrumb>
     )
 }

@@ -1,4 +1,4 @@
 
-export interface StyledBreadcrumbProps {
+export interface ISBreadcrumb {
     theme: {}
 }
