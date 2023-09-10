@@ -21,19 +21,20 @@ export function Tab({ tabs, tabActiveInitial }: ITab) {
     return (
         <STab theme={theme}>
             <STabGroup theme={theme}>
-                {tabs.map(item => (
+                {tabs.map((item, index) => (
                     <TabNav
+                        key={`tab-nav-${index}`}
                         active={item.tab === tabActive}
                         handlerChange={() => handlerChange(item.tab)}
                     >
-                        {item.icon && item.icon} <STabIcon>{item.label}</STabIcon>
+                        {item.icon && item.icon} <STabIcon key={`stab-icon-${index}`}>{item.label}</STabIcon>
                     </TabNav>
                 ))}
             </STabGroup>
 
             <STabGroup theme={theme}>
-                {tabs.map(item => (
-                    <TabContent active={item.tab === tabActive}>
+                {tabs.map((item, index) => (
+                    <TabContent key={`tab-content-${index}`} active={item.tab === tabActive}>
                         {item.content}
                     </TabContent>
                 ))}
