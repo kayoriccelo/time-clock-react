@@ -1,16 +1,16 @@
-import { DrawerProps } from "./interface"
-import { DrawerStyled, TitleDrawerStyle } from "./style/styled"
+import { IDrawer } from "./interface"
+import { SDrawer, STitleDrawer } from "./style/styled"
 import { SubMenu } from "../submenu"
-import { SubMenuProps } from "../submenu/interface"
+import { ISubMenu } from "../submenu/interface"
 
 
-export function Drawer({ open, titleMenu, submenus, handleOpen }: DrawerProps) {
+export function Drawer({ open, titleMenu, submenus, handleOpen }: IDrawer) {
     return (
-        <DrawerStyled open={open}>
-            <TitleDrawerStyle>{titleMenu}</TitleDrawerStyle>
+        <SDrawer open={open}>
+            <STitleDrawer>{titleMenu}</STitleDrawer>
 
-            {submenus && submenus.map((submenu: SubMenuProps, index: number) => {
-                const { to, icon, title } = submenu
+            {submenus && submenus.map((submenu: ISubMenu, index: number) => {
+                const { to, icon, title, breadcrumbs } = submenu
 
                 return (
                     <SubMenu
@@ -20,9 +20,10 @@ export function Drawer({ open, titleMenu, submenus, handleOpen }: DrawerProps) {
                         title={title}
                         open={open}
                         handleOpen={handleOpen}
+                        breadcrumbs={breadcrumbs}
                     />
                 )
             })}
-        </DrawerStyled>
+        </SDrawer>
     )
 }

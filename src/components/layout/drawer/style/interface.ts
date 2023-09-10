@@ -1,5 +1,5 @@
 
-export interface StyledDrawerProps {
+export interface ISDrawer {
     theme: {},
     open: Boolean,
 }

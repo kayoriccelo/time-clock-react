@@ -1,5 +1,5 @@
 
-export interface DrawerProps {
+export interface IDrawer {
     submenus?: any,
     titleMenu?: string,
     open: boolean,

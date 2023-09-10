@@ -1,8 +1,9 @@
 import { styled } from "styled-components"
-import { StyledDrawerProps } from "./interface"
+
+import { ISDrawer } from "./interface"
 
 
-export const DrawerStyled = styled.div<StyledDrawerProps>`
+export const SDrawer = styled.div<ISDrawer>`
     position: absolute;
     flex-direction: column;
     margin: 5.6rem 0.75rem;
@@ -25,7 +26,7 @@ export const DrawerStyled = styled.div<StyledDrawerProps>`
     `}
 `
 
-export const TitleDrawerStyle = styled.div`
+export const STitleDrawer = styled.div`
     padding: 0.6rem 0.8rem;
     margin-bottom: 0.6rem;
     background: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
