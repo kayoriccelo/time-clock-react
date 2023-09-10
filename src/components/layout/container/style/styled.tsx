@@ -1,8 +1,9 @@
 import { styled } from "styled-components"
-import { StyledContainerProps } from "./interface"
+
+import { ISContainer } from "./interface"
 
 
-export const ContainerStyled = styled.div<StyledContainerProps>`
+export const SContainer = styled.div<ISContainer>`
     display: flex;
     height: 100vh;
     

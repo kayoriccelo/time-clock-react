@@ -1,4 +1,4 @@
 
-export interface StyledContainerProps {
+export interface ISContainer {
     theme: {}
 }

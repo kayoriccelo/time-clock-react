@@ -1,15 +1,17 @@
 import { useContext } from "react"
-import { ContainerProps } from "./interface"
-import { ContainerStyled } from "./style/styled"
-import ThemeContext from "../../../pages/app/contexts"
+
+import { IContainer } from "./interface"
+import { SContainer } from "./style/styled"
+import { GlobalContext } from "../../../pages/app/context"
 
 
-export function Container({ children }: ContainerProps) {
-    const { theme } = useContext(ThemeContext)
+export function Container({ children }: IContainer) {
+    const { global } = useContext(GlobalContext)
+    const { theme } = global
 
     return (
-        <ContainerStyled theme={theme}>
+        <SContainer theme={theme}>
             {children}
-        </ContainerStyled>
+        </SContainer>
     )
 }
