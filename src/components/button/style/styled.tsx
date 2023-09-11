@@ -10,13 +10,13 @@ export const SButton = styled.button<ISButton>`
     border: 0px;
     cursor: pointer;
 
-    ${props => props.type == 'success' && `${props.theme.button.success}`}
-    ${props => props.type == 'primary' && `${props.theme.button.primary}`}
-    ${props => props.type == 'secondary' && `${props.theme.button.secondary}`}
-    ${props => props.type == 'danger' && `${props.theme.button.danger}`}
-    ${props => !props.type && `background-color: transparent; color: white;`}
+    ${({ type, theme }) => type == 'success' && `${theme.button.success}`}
+    ${({ type, theme }) => type == 'primary' && `${theme.button.primary}`}
+    ${({ type, theme }) => type == 'secondary' && `${theme.button.secondary}`}
+    ${({ type, theme }) => type == 'danger' && `${theme.button.danger}`}
+    ${({ type }) => !type && `background-color: transparent; color: white;`}
 
     &:hover {
-        ${props => props.theme.button.hover}
+        ${({ theme }) => theme.button.hover}
     };
 `

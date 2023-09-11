@@ -13,10 +13,6 @@ export interface ITab {
     tabActiveInitial: string,
 }
 
-export interface ITabGroup {
-    theme: {}
-}
-
 export interface ITabNav {
     children: ReactNode,   
     active: boolean,

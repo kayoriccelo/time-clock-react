@@ -1,13 +1,10 @@
-import { useContext, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 import { STab, STabContent, STabGroup, STabIcon, STabNav } from "./style/styled"
 import { ITabContent, ITabNav, ITab } from "./interface"
-import { GlobalContext } from "../../pages/app/context"
 
 
 export function Tab({ tabs, tabActiveInitial }: ITab) {
-    const { global } = useContext(GlobalContext)
-    const { theme } = global
     const [tabActive, useTabActive] = useState('')
 
     useEffect(() => {
@@ -19,8 +16,8 @@ export function Tab({ tabs, tabActiveInitial }: ITab) {
     }
 
     return (
-        <STab theme={theme}>
-            <STabGroup theme={theme}>
+        <STab>
+            <STabGroup>
                 {tabs.map((item, index) => (
                     <TabNav
                         key={`tab-nav-${index}`}
@@ -32,7 +29,7 @@ export function Tab({ tabs, tabActiveInitial }: ITab) {
                 ))}
             </STabGroup>
 
-            <STabGroup theme={theme}>
+            <STabGroup>
                 {tabs.map((item, index) => (
                     <TabContent key={`tab-content-${index}`} active={item.tab === tabActive}>
                         {item.content}
@@ -44,22 +41,16 @@ export function Tab({ tabs, tabActiveInitial }: ITab) {
 }
 
 export function TabNav({ children, active, handlerChange }: ITabNav) {
-    const { global } = useContext(GlobalContext)
-    const { theme } = global
-
     return (
-        <STabNav theme={theme} active={active} onClick={handlerChange}>
+        <STabNav active={active} onClick={handlerChange}>
             {children}
         </STabNav>
     )
 }
 
 export function TabContent({ children, active }: ITabContent) {
-    const { global } = useContext(GlobalContext)
-    const { theme } = global
-
     return (
-        <STabContent theme={theme} active={active}>
+        <STabContent active={active}>
             {children}
         </STabContent>
     )

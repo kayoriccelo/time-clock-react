@@ -7,10 +7,10 @@ import { GlobalContext } from "../../../pages/app/context"
 
 export function Breadcrumb() {
     const { global } = useContext(GlobalContext)
-    const { theme, breadcrumbs } = global
+    const { breadcrumbs } = global
 
     return (
-        <SBreadcrumb theme={theme}>
+        <SBreadcrumb>
             {breadcrumbs && breadcrumbs.map((breadcrumb, index) => {
                 return (
                     <div key={`bf-${index}`} style={{display: 'flex'}}>

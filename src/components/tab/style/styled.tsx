@@ -1,17 +1,17 @@
 import { styled } from "styled-components"
 
-import { ISTabGroup, ISTabNav, ISTabContent } from "./interface"
+import { ISTabNav, ISTabContent } from "./interface"
 
 
 export const STab = styled.div`
-    
+    ${({ theme }) => theme.tab.style}
 `
 
-export const STabGroup = styled.div<ISTabGroup>`
+export const STabGroup = styled.div`
     display: flex;
     margin-bottom: 0.6rem;
 
-    ${props => props.theme.tab.group}
+    ${({ theme }) => theme.tab.group}
 `
 
 export const STabNav = styled.button<ISTabNav>`
@@ -26,8 +26,8 @@ export const STabNav = styled.button<ISTabNav>`
     font-size: 0.8rem;
     cursor: pointer;
 
-    ${props => props.theme.tab.nav}
-    ${props => props.active && props.theme.tab.active}
+    ${({ active, theme }) => active && theme.tab.nav.active}
+    ${({ theme }) => theme.tab.nav.style}
 `
 
 export const STabIcon = styled.span`
@@ -35,8 +35,7 @@ export const STabIcon = styled.span`
 `
 
 export const STabContent = styled.div<ISTabContent>`
-    display: ${props => props.active ? 'flex' : 'none'};
-    background-color: white;
-
-    ${props => props.theme.tab.content}
+    display: ${({ active }) => active ? 'flex' : 'none'};
+    
+    ${({ theme }) => theme.tab.content}
 `
