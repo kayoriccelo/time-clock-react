@@ -25,5 +25,5 @@ export const SSubMenu = styled(Link)<ISSubMenu>`
         color: #1e1e2d;
     }
     
-    ${props => props.theme.submenu}
+    ${({ theme }) => theme.submenu}
 `

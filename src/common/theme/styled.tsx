@@ -23,7 +23,7 @@ export const light = {
         backgroundColor: 'rgb(241, 245, 249)'
     },
     slogan: {
-        background: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))', 
+        background: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))',
         color: 'white'
     },
     sideBar: {
@@ -32,59 +32,61 @@ export const light = {
         boxShadow: '0.438rem -0.538rem 0.400rem -0.625rem #797a7a'
     },
     menu: {
-        fontFamily: fontFamily
+        fontFamily
     },
     submenu: {
-        fontFamily: fontFamily
+        fontFamily
     },
     header: {
         background: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))',
         color: 'white',
-        fontFamily: fontFamily,
+        fontFamily,
     },
     title: {
-        fontFamily: fontFamily,
+        fontFamily,
     },
     breadcrumb: {
         color: 'rgb(28, 30, 39)',
         fontSize: '0.7rem',
-        fontFamily: fontFamily,
+        fontFamily,
     },
     footer: {
         background: 'linear-gradientk(195deg, rgb(66, 66, 74), rgb(25, 25, 25))',
         color: 'white',
         fontSize: '0.8rem',
-        fontFamily: fontFamily
+        boxShadow: '0.438rem 0.438rem 0.375rem -0.5rem #202a39',
+        borderTop: '0.063rem solid #202a39',
+        fontFamily
     },
     button: {
         primary: {
             backgroundColor: primaryLight,
             color: 'white',
-            fontFamily: fontFamily
+            fontFamily
         },
         success: {
             backgroundColor: successLight,
             color: 'white',
-            fontFamily: fontFamily
+            fontFamily
         },
         danger: {
             backgroundColor: dangerLight,
             color: 'white',
-            fontFamily: fontFamily
+            fontFamily
         },
         hover: {
             background: '#71bc78a6'
         }
     },
-    box:{
+    box: {
 
     },
     label: {
         title: {
-            fontFamily: fontFamily
+            fontFamily
         },
         value: {
-            fontFamily: fontFamily
+            fontFamily
         }
     },
     tab: {
@@ -93,7 +95,7 @@ export const light = {
         },
         nav: {
             style: {
-                fontFamily: fontFamily,
+                fontFamily,
                 borderBottom: '1px solid transparent',
                 '&:hover': {
                     fontWeight: 600,
@@ -109,7 +111,6 @@ export const light = {
             },
         },
         content: {
-            backgroundColor: 'white'
         },
         group: {},
     },
@@ -119,8 +120,31 @@ export const light = {
         content: {},
     },
     list: {
-        backgroundColor: 'white',
-        boxShadow: '0.338rem 0.338rem 0.275rem -0.5rem #202a39'
+        style: {},
+        head: {
+            style: {
+            },
+            row: {
+                fontFamily,
+                color: 'white',
+                background: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))',
+            },
+            column: {
+                fontFamily,
+            }
+        },
+        body: {
+            style: {
+                boxShadow: '0.338rem 0.338rem 0.275rem -0.5rem #202a39',
+                backgroundColor: 'white'
+            },
+            row: {
+                fontFamily,
+            },
+            column: {
+                fontFamily,
+            }
+        }
     }
 }
 

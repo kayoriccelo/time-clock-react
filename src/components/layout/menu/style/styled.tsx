@@ -29,7 +29,7 @@ export const SMenuLink = styled(Link)<ISMenu>`
         color: #1e1e2d;
     }
     
-    ${props => props.theme.menu}
+    ${({ theme }) => theme.menu}
 `
 
 
@@ -60,5 +60,5 @@ export const SMenuButton = styled.button<ISMenu>`
         color: #1e1e2d;
     }
     
-    ${props => props.theme.menu}
+    ${({ theme }) => theme.menu}
 `

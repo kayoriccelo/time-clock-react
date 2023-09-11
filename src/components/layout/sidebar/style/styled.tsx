@@ -3,7 +3,7 @@ import { styled } from "styled-components"
 import { ISSidebarSlogan, ISSidebar } from "./interface"
 
 
-export const SSidebar = styled.div<ISSidebar>`
+export const SSidebar = styled.div`
     padding: 0.4rem;
     margin: 40px 0.6rem 0 0.6rem;
     width: 7rem;
@@ -12,10 +12,10 @@ export const SSidebar = styled.div<ISSidebar>`
     display: flex;
     flex-direction: column;
     
-    ${props => props.theme.sideBar}
+    ${({ theme }) => theme.sideBar}
 `
 
-export const SSidebarSlogan = styled.div<ISSidebarSlogan>`
+export const SSidebarSlogan = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,5 +24,5 @@ export const SSidebarSlogan = styled.div<ISSidebarSlogan>`
     height: 6rem;
     border-radius: 0.25rem; 
 
-    ${props => props.theme.slogan}
+    ${({ theme }) => theme.slogan}
 `

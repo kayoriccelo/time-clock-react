@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useState } from "react"
 import { MdDashboardCustomize, MdAppRegistration, MdFingerprint } from "react-icons/md"
 import { BiSolidBusiness } from "react-icons/bi"
 import { HiCubeTransparent } from "react-icons/hi"
@@ -6,12 +6,9 @@ import { HiCubeTransparent } from "react-icons/hi"
 import { SSidebar, SSidebarSlogan } from "./style/styled"
 import { Menu } from "../menu"
 import { Drawer } from "../drawer"
-import { GlobalContext } from "../../../pages/app/context"
 
 
 export function Sidebar() {
-    const { global } = useContext(GlobalContext)
-    const { theme } = global
     const [open, useOpen] = useState(false)
     const [submenus, useSubMenus] = useState([])
     const [titleMenu, useTitleMenu] = useState('')
@@ -34,8 +31,8 @@ export function Sidebar() {
                 handleOpen={handleOpen}
             />
 
-            <SSidebar theme={theme}>
-                <SSidebarSlogan theme={theme}>
+            <SSidebar>
+                <SSidebarSlogan>
                     <HiCubeTransparent size={55} style={{ color: 'white' }} />
                 </SSidebarSlogan>
 

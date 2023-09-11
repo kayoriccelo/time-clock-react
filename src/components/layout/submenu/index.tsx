@@ -7,7 +7,6 @@ import { SSubMenu } from "./style/styled"
 
 export function SubMenu({ title, to, icon, open, breadcrumbs, handleOpen }: ISubMenu) {
     const { global, handlerGlobal } = useContext(GlobalContext)
-    const { theme } = global
 
     function handleClick() {
         handleOpen && handleOpen(!open)
@@ -16,7 +15,7 @@ export function SubMenu({ title, to, icon, open, breadcrumbs, handleOpen }: ISub
     }
 
     return (
-        <SSubMenu to={to} theme={theme} onClick={handleClick}>
+        <SSubMenu to={to} onClick={handleClick}>
             {icon && icon}
 
             {title && title}

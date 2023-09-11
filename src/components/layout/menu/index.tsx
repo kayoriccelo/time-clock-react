@@ -7,8 +7,7 @@ import { GlobalContext } from "../../../pages/app/context"
 
 export function Menu({ title, icon, to, open, breadcrumbs, handleOpen, handleSubMenus }: IMenu) {
     const { global, handlerGlobal } = useContext(GlobalContext)
-    const { theme } = global
-
+    
     function handleClick() {
         if (to) {
             handleOpen && handleOpen(false)
@@ -25,13 +24,13 @@ export function Menu({ title, icon, to, open, breadcrumbs, handleOpen, handleSub
 
     return (
         to ? (
-            <SMenuLink to={to} theme={theme} onClick={() => handleClick()}>
+            <SMenuLink to={to} onClick={() => handleClick()}>
                 {icon && icon}
 
                 {title && title}
             </SMenuLink>
         ) : (
-            <SMenuButton theme={theme} onClick={() => handleClick()}>
+            <SMenuButton onClick={() => handleClick()}>
                 {icon && icon}
 
                 {title && title}

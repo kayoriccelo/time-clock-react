@@ -1,4 +1,0 @@
-
-export interface ISFooter {
-    theme: {}
-}

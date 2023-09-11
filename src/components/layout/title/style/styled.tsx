@@ -1,9 +1,7 @@
 import { styled } from "styled-components"
 
-import { ISTitle } from "./interface"
 
-
-export const STitle = styled.div<ISTitle>`
+export const STitle = styled.div`
     margin: 0.18rem 0.3rem 0 0.3rem;
     min-width: 20vh;
     max-width: 40vh;
@@ -43,5 +41,5 @@ export const STitle = styled.div<ISTitle>`
         }
     }
 
-    ${props => props.theme.title}
+    ${({ theme }) => theme.title}
 `

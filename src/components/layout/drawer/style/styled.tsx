@@ -17,7 +17,7 @@ export const SDrawer = styled.div<ISDrawer>`
     opacity: 0;
     left: 8.3rem;
     
-    ${props => props.open ? `
+    ${({ open }) => open ? `
         opacity: 1; 
         width: 15rem; 
     ` : `

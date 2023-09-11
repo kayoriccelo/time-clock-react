@@ -6,10 +6,10 @@ import { GlobalContext } from "../../../pages/app/context"
 
 export function Title () {
     const { global } = useContext(GlobalContext)
-    const { theme, title } = global
+    const { title } = global
 
     return (
-        <STitle theme={theme}>
+        <STitle>
             {title}
         </STitle>
     )
