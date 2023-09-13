@@ -9,7 +9,7 @@ export const SDrawer = styled.div<ISDrawer>`
     margin: 5.6rem 0.75rem;
     width: 0;
     height: calc(100vh - 8.5rem);
-    z-index: 0;
+    z-index: 99999;
     background-color: white;
     box-shadow: 0.438rem 0.438rem 0.375rem -0.625rem #797a7a;
     transition: all .60s ease;  

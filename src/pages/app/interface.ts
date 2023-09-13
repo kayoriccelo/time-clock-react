@@ -10,5 +10,5 @@ export interface IGlobal {
 
 export interface IGlobalContext {
 	global: IGlobal,
-	handlerGlobal: (newGlobal: IGlobal) => void
+	setGlobal: (newGlobal: IGlobal) => void
 }

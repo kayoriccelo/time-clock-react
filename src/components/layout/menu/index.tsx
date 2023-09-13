@@ -6,13 +6,13 @@ import { GlobalContext } from "../../../pages/app/context"
 
 
 export function Menu({ title, icon, to, open, breadcrumbs, handleOpen, handleSubMenus }: IMenu) {
-    const { global, handlerGlobal } = useContext(GlobalContext)
+    const { global, setGlobal } = useContext(GlobalContext)
     
     function handleClick() {
         if (to) {
             handleOpen && handleOpen(false)
 
-            handlerGlobal({
+            setGlobal({
                 ...global, title: title, breadcrumbs: breadcrumbs ? breadcrumbs : global.breadcrumbs
             })
         } else {

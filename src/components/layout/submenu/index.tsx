@@ -6,12 +6,12 @@ import { SSubMenu } from "./style/styled"
 
 
 export function SubMenu({ title, to, icon, open, breadcrumbs, handleOpen }: ISubMenu) {
-    const { global, handlerGlobal } = useContext(GlobalContext)
+    const { global, setGlobal } = useContext(GlobalContext)
 
     function handleClick() {
         handleOpen && handleOpen(!open)
 
-        handlerGlobal({ ...global, title: title, breadcrumbs: breadcrumbs })
+        setGlobal({ ...global, title: title, breadcrumbs: breadcrumbs })
     }
 
     return (

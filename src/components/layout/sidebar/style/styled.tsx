@@ -1,7 +1,5 @@
 import { styled } from "styled-components"
 
-import { ISSidebarSlogan, ISSidebar } from "./interface"
-
 
 export const SSidebar = styled.div`
     padding: 0.4rem;
