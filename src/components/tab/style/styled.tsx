@@ -19,9 +19,10 @@ export const STabNav = styled.button<ISTabNav>`
     align-items: center;
     height: 2rem;
     border: none;
-    border-radius: 0.15rem;
+    border-top-right-radius: 0.15rem;
+    border-top-left-radius: 0.15rem;
     padding: 0.3rem 0.9rem;
-    margin: 0.3rem 0.3rem 0.3rem 0;
+    margin: 0;
     background-color: transparent;
     font-size: 0.8rem;
     cursor: pointer;
@@ -36,6 +37,36 @@ export const STabIcon = styled.span`
 
 export const STabContent = styled.div<ISTabContent>`
     display: ${({ active }) => active ? 'flex' : 'none'};
-    
+    width: 100%;
+    -webkit-animation: text-focus-in 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+       
+    @-webkit-keyframes text-focus-in {
+        0% {
+            -webkit-filter: blur(12px);
+                    filter: blur(12px);
+            opacity: 0;
+        }
+        100% {
+            -webkit-filter: blur(0px);
+                    filter: blur(0px);
+            opacity: 1;
+        }
+    };
+
+    @keyframes text-focus-in {
+        0% {
+            -webkit-filter: blur(12px);
+                    filter: blur(12px);
+            opacity: 0;
+        }
+        100% {
+            -webkit-filter: blur(0px);
+                    filter: blur(0px);
+            opacity: 1;
+        }
+    };
+
     ${({ theme }) => theme.tab.content}
+
 `

@@ -1,5 +1,6 @@
 const fontFamily = 'Roboto, sans-serif'
 
+const backgroundLight = 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))'
 const primaryLight = ''
 const successLight = ''
 const warningLight = ''
@@ -23,7 +24,7 @@ export const light = {
         backgroundColor: 'rgb(241, 245, 249)'
     },
     slogan: {
-        background: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))',
+        background: backgroundLight,
         color: 'white'
     },
     sideBar: {
@@ -38,7 +39,7 @@ export const light = {
         fontFamily
     },
     header: {
-        background: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))',
+        background: backgroundLight,
         color: 'white',
         fontFamily,
     },
@@ -51,7 +52,7 @@ export const light = {
         fontFamily,
     },
     footer: {
-        background: 'linear-gradientk(195deg, rgb(66, 66, 74), rgb(25, 25, 25))',
+        background: backgroundLight,
         color: 'white',
         fontSize: '0.8rem',
         boxShadow: '0.438rem 0.438rem 0.375rem -0.5rem #202a39',
@@ -90,9 +91,7 @@ export const light = {
         }
     },
     tab: {
-        style: {
-
-        },
+        style: {},
         nav: {
             style: {
                 fontFamily,
@@ -101,17 +100,16 @@ export const light = {
                     fontWeight: 600,
                     borderBottomWidth: '1px',
                     borderBottomStyle: 'solid',
-                    borderBottomColor: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))'
+                    borderBottomColor: backgroundLight
                 },
             },
             active: {
                 fontWeight: 600,
-                background: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))',
+                background: backgroundLight,
                 color: '#eeedede2'
             },
         },
-        content: {
-        },
+        content: {},
         group: {},
     },
     detail: {
@@ -121,13 +119,13 @@ export const light = {
     },
     list: {
         style: {},
+        header: {},
         head: {
-            style: {
-            },
+            style: {},
             row: {
                 fontFamily,
                 color: 'white',
-                background: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))',
+                background: backgroundLight,
             },
             column: {
                 fontFamily,
