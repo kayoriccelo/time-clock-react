@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
-import { STab, STabContent, STabGroup, STabIcon, STabNav } from "./style/styled"
-import { ITabContent, ITabNav, ITab } from "./interface"
+import { STab, STabContent, STabGroup, STabIcon, STabNav } from "./styles/styled"
+import { ITabContent, ITabNav, ITab } from "./interfaces"
 
 
 export function Tab({ tabs, tabActiveInitial }: ITab) {

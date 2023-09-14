@@ -1,5 +1,5 @@
-import { IActionsDetail, IContentDetail, IHeaderDetail, IScreenDetail } from "./interface"
-import { SActionsDetail, SContentDetail, SHeaderDetail, SScreenDetail } from "./styled"
+import { IActionsDetail, IContentDetail, IHeaderDetail, IScreenDetail } from "./interfaces"
+import { SActionsDetail, SContentDetail, SHeaderDetail, SScreenDetail } from "./styles"
 import { Title } from "../../layout/title"
 import { Breadcrumb } from "../../layout/breadcrumb"
 

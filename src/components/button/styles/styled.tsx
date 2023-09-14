@@ -1,6 +1,6 @@
 import { styled } from "styled-components"
 
-import { ISButton } from "./interface"
+import { ISButton } from "./interfaces"
 
 
 export const SButton = styled.button<ISButton>`

@@ -1,5 +1,5 @@
-import { IButton } from "./interface"
-import { SButton } from "./style/styled"
+import { IButton } from "./interfaces"
+import { SButton } from "./styles/styled"
 
 
 export function Button({ children, type }: IButton) {

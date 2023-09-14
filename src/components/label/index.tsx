@@ -1,5 +1,5 @@
-import { ILabel } from "./interface"
-import { SLabel } from "./style/styled"
+import { ILabel } from "./interfaces"
+import { SLabel } from "./styles"
 
 
 export function Label({ children, type, size }: ILabel) {

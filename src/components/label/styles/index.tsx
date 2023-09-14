@@ -1,6 +1,6 @@
 import { styled } from "styled-components"
 
-import { ISLabel } from "./interface"
+import { ISLabel } from "./interfaces"
 
 
 export const SLabel = styled.label<ISLabel>`

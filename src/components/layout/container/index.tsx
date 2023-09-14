@@ -2,7 +2,7 @@ import { useContext } from "react"
 
 import { IContainer } from "./interface"
 import { SContainer } from "./style/styled"
-import { GlobalContext } from "../../../pages/app/context"
+import { GlobalContext } from "../../../pages/app/contexts"
 
 
 export function Container({ children }: IContainer) {

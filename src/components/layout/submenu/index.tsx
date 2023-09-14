@@ -1,6 +1,6 @@
 import { useContext } from "react"
 
-import { GlobalContext } from "../../../pages/app/context"
+import { GlobalContext } from "../../../pages/app/contexts"
 import { ISubMenu } from "./interface"
 import { SSubMenu } from "./style/styled"
 

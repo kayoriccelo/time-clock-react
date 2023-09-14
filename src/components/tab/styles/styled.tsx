@@ -1,6 +1,6 @@
 import { styled } from "styled-components"
 
-import { ISTabNav, ISTabContent } from "./interface"
+import { ISTabNav, ISTabContent } from "./interfaces"
 
 
 export const STab = styled.div`
