@@ -1,8 +1,9 @@
 import { useContext } from "react"
 import { TbPointFilled } from "react-icons/tb"
 
-import { SBreadcrumb, SBreadcrumbIcon, SBreadcrumbLabel } from "./style/styled"
 import { GlobalContext } from "../../../pages/app/contexts"
+
+import { SBreadcrumb, SBreadcrumbIcon, SBreadcrumbLabel } from "./styles/styled"
 
 
 export function Breadcrumb() {

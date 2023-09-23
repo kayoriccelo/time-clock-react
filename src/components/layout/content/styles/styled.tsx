@@ -14,6 +14,6 @@ export const SContent = styled.div`
         border-radius: 4px;
     }
 
-    ${({ theme }) => theme.content}
+    ${({ theme: { layout: { content } } }) => content.style}
     
 `

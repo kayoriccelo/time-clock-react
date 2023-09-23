@@ -10,7 +10,7 @@ export const SSidebar = styled.div`
     display: flex;
     flex-direction: column;
     
-    ${({ theme }) => theme.sideBar}
+    ${({ theme: { layout: { sideBar } } }) => sideBar.style}
 `
 
 export const SSidebarSlogan = styled.div`
@@ -22,5 +22,5 @@ export const SSidebarSlogan = styled.div`
     height: 6rem;
     border-radius: 0.25rem; 
 
-    ${({ theme }) => theme.slogan}
+    ${({ theme: { slogan } }) => slogan.style}
 `

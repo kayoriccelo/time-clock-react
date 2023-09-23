@@ -1,7 +1,7 @@
 import { effectClick } from "../../common/theme/useful"
 
 import { IButton } from "./interfaces"
-import { SButton } from "./styles/styled"
+import { SButton } from "./styles"
 
 
 export function Button({ children, type, onClick }: IButton) {

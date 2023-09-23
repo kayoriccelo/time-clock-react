@@ -1,8 +1,9 @@
 import { useContext } from "react"
 
-import { IMenu } from "./interface"
-import { SMenuLink, SMenuButton } from "./style/styled"
 import { GlobalContext } from "../../../pages/app/contexts"
+
+import { IMenu } from "./interfaces"
+import { SMenuLink, SMenuButton } from "./styles"
 
 
 export function Menu({ title, icon, to, open, breadcrumbs, handleOpen, handleSubMenus }: IMenu) {

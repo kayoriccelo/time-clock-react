@@ -1,5 +1,5 @@
-import { IMain } from "./interface"
-import { SMain } from "./style/styled"
+import { IMain } from "./interfaces"
+import { SMain } from "./styles"
 
 
 export function Main({ children }: IMain) {

@@ -8,7 +8,7 @@ export const SBreadcrumb = styled.div`
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 
-    ${({ theme }) => theme.breadcrumb}
+    ${({ theme: { layout: { breadcrumb } } }) => breadcrumb.style}
 `
 
 export const SBreadcrumbIcon = styled.span` 

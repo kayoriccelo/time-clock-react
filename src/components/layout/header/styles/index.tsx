@@ -10,5 +10,5 @@ export const SHeader = styled.div`
     border-bottom-left-radius: 0.25rem;
     display: flex;
 
-    ${({ theme }) => theme.header}
+    ${({ theme: { layout: { header } } }) => header.style}
 `

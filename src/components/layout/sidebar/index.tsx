@@ -3,9 +3,10 @@ import { MdDashboardCustomize, MdAppRegistration, MdFingerprint } from "react-ic
 import { BiSolidBusiness } from "react-icons/bi"
 import { HiCubeTransparent } from "react-icons/hi"
 
-import { SSidebar, SSidebarSlogan } from "./style/styled"
 import { Menu } from "../menu"
 import { Drawer } from "../drawer"
+
+import { SSidebar, SSidebarSlogan } from "./styles"
 
 
 export function Sidebar() {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import { STab, STabContent, STabGroup, STabIcon, STabNav } from "./styles/styled"
+import { STab, STabContent, STabGroup, STabIcon, STabNav } from "./styles"
 import { ITabContent, ITabNav, ITab } from "./interfaces"
 
 

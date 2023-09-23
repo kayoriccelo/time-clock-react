@@ -1,7 +1,8 @@
 import { useContext } from "react"
 
-import { STitle } from "./style/styled"
 import { GlobalContext } from "../../../pages/app/contexts"
+
+import { STitle } from "./styles"
 
 
 export function Title () {

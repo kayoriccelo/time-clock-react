@@ -5,7 +5,7 @@ export const STitle = styled.div`
     margin: 0.18rem 0.3rem 0 0.3rem;
     min-width: 20vh;
     max-width: 40vh;
-    border-bottom: 1px solid #1e1e2d;
+    border-bottom: 1px solid transparent;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -41,5 +41,5 @@ export const STitle = styled.div`
         }
     }
 
-    ${({ theme }) => theme.title}
+    ${({ theme: { layout: { title } } }) => title.style}
 `

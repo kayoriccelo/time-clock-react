@@ -4,20 +4,19 @@ import { ISTabNav, ISTabContent } from "./interfaces"
 
 
 export const STab = styled.div`
-    ${({ theme }) => theme.tab.style}
 `
 
 export const STabGroup = styled.div`
     display: flex;
     margin-bottom: 0.6rem;
 
-    ${({ theme }) => theme.tab.group}
+    ${({ theme: { components: { tab } } }) => tab.group.style}
 `
 
-export const STabNav = styled.button<ISTabNav>`
+export const STabNav = styled.a<ISTabNav>`
     display: flex;
     align-items: center;
-    height: 2rem;
+    height: 1.6rem;
     border: none;
     border-top-right-radius: 0.15rem;
     border-top-left-radius: 0.15rem;
@@ -27,8 +26,8 @@ export const STabNav = styled.button<ISTabNav>`
     font-size: 0.8rem;
     cursor: pointer;
 
-    ${({ active, theme }) => active && theme.tab.nav.active}
-    ${({ theme }) => theme.tab.nav.style}
+    ${({ theme: { components: { tab } } }) => tab.nav.style}
+    ${({ active, theme: { components: { tab } } }) => active && tab.nav.active.style}
 `
 
 export const STabIcon = styled.span`
@@ -66,7 +65,4 @@ export const STabContent = styled.div<ISTabContent>`
             opacity: 1;
         }
     };
-
-    ${({ theme }) => theme.tab.content}
-
 `

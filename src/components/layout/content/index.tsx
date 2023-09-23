@@ -1,5 +1,5 @@
-import { IContent } from "./interface"
-import { SContent } from "./style/styled"
+import { IContent } from "./interfaces"
+import { SContent } from "./styles/styled"
 
 
 export function Content ({ children }: IContent) {

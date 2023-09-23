@@ -1,7 +1,8 @@
-import { IDrawer } from "./interface"
-import { SDrawer, STitleDrawer } from "./style/styled"
 import { SubMenu } from "../submenu"
-import { ISubMenu } from "../submenu/interface"
+import { ISubMenu } from "../submenu/interfaces"
+
+import { IDrawer } from "./interfaces"
+import { SDrawer, STitleDrawer } from "./styles"
 
 
 export function Drawer({ open, titleMenu, submenus, handleOpen }: IDrawer) {

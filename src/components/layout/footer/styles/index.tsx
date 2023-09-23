@@ -5,5 +5,5 @@ export const SFooter = styled.div`
     padding: 0.5rem;
     border-top-left-radius: 0.25rem;
 
-    ${({ theme }) => theme.footer}
+    ${({ theme: { layout: { footer } } }) => footer.style}
 `

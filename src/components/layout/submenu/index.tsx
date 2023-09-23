@@ -1,8 +1,9 @@
 import { useContext } from "react"
 
 import { GlobalContext } from "../../../pages/app/contexts"
-import { ISubMenu } from "./interface"
-import { SSubMenu } from "./style/styled"
+
+import { ISubMenu } from "./interfaces"
+import { SSubMenu } from "./styles"
 
 
 export function SubMenu({ title, to, icon, open, breadcrumbs, handleOpen }: ISubMenu) {

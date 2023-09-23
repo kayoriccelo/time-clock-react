@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 
-import { IBreadcrumb } from "../breadcrumb/interface"
+import { IBreadcrumb } from "../../breadcrumb/interfaces"
 
 
 export interface ISubMenu {
