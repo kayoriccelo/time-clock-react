@@ -1,4 +1,4 @@
-import { effectClick } from "../../common/theme/useful"
+import { effectClick } from "../../../common/theme/useful"
 
 import { IButton } from "./interfaces"
 import { SButton } from "./styles"

@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 
-import { IBreadcrumb } from "../../breadcrumb/interfaces"
+import { IBreadcrumb } from "../../../core/breadcrumb/interfaces"
 
 
 export interface IMenu {
