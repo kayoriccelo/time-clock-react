@@ -10,13 +10,22 @@ export const SButton = styled.button<ISButton>`
     border: 0px;
     cursor: pointer;
 
-    ${({ type, theme: { button } }) => type == 'success' && `${button.success.style}`}
-    ${({ type, theme: { button } }) => type == 'primary' && `${button.primary.style}`}
-    ${({ type, theme: { button } }) => type == 'secondary' && `${button.secondary.style}`}
-    ${({ type, theme: { button } }) => type == 'danger' && `${button.danger.style}`}
-    ${({ type }) => !type && `background-color: transparent; color: white;`}
+    ${({ type, theme: { components: { core: { button } } } }) => {
+        let style = ''
+        if (type == 'success') style = `${button.success.style}`
+
+        if (type == 'primary') style = `${button.primary.style}`
+
+        if (type == 'secondary') style = `${button.secondary.style}`
+
+        if (type == 'danger') style = `${button.danger.style}`
+
+        if (!type) style = style + `background-color: transparent; color: white;`
+
+        return style
+    }}
 
     &:hover {
-        ${({ theme: { components: { button } } }) => button.hover.style}
+        ${({ theme: { components: { core: { button } } } }) => button.hover.style}
     };
 `

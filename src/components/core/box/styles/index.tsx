@@ -8,5 +8,5 @@ export const SBox = styled.span`
     margin: 0.2rem;
     border-radius: 0.15rem;
 
-    ${({ theme: { components: { box } } }) => box.style}
+    ${({ theme: { components: { core: { box } } } }) => box.style}
 `

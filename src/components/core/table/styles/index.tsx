@@ -20,7 +20,7 @@ export const STableHeadRow = styled.tr`
     border-top-right-radius: 0.25rem;
     border-top-left-radius: 0.25rem;
 
-    ${({ theme: { components: { table } } }) => table.head.row.style}
+    ${({ theme: { components: { core: { table } } } }) => table.head.row.style}
 `
 
 export const STableHeadColumn = styled.th<ISTableHeadColumn>`
@@ -47,11 +47,11 @@ export const STableOrder = styled.button<ISTableOrder>`
     padding: 0;
     font-weight: bold;
 
-    ${({ theme: { components: { table } } }) => table.head.column.style}
+    ${({ theme: { components: { core: { table } } } }) => table.head.column.style}
 `
 
 export const STableBody = styled.tbody`
-    ${({ theme: { components: { table } } }) => table.body.style}
+    ${({ theme: { components: { core: { table } } } }) => table.body.style}
 `
 
 export const STableBodyRow = styled.tr`
@@ -61,7 +61,7 @@ export const STableBodyRow = styled.tr`
     margin: 0 0.2rem;
     
     &:nth-child(even) {
-        background-color: #eaf8e6a9;
+        ${({ theme: { components: { core: { table } } } }) => table.body.row.nthChild.style}
     }
 
 	-webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
@@ -112,5 +112,5 @@ export const STableBodyColumn = styled.td<ISTableBodyColumn>`
 
     width: ${({ size }) => size ? size : 'auto'};
     ${({ align }) => align && `text-align: ${align};`}
-    ${({ theme: { components: { table } } }) => table.body.column.style}
+    ${({ theme: { components: { core: { table } } } }) => table.body.column.style}
 `

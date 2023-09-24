@@ -10,7 +10,7 @@ export const STabGroup = styled.div`
     display: flex;
     margin-bottom: 0.6rem;
 
-    ${({ theme: { components: { tab } } }) => tab.group.style}
+    ${({ theme: { components: { core: { tab } } } }) => tab.group.style}
 `
 
 export const STabNav = styled.a<ISTabNav>`
@@ -26,8 +26,14 @@ export const STabNav = styled.a<ISTabNav>`
     font-size: 0.8rem;
     cursor: pointer;
 
-    ${({ theme: { components: { tab } } }) => tab.nav.style}
-    ${({ active, theme: { components: { tab } } }) => active && tab.nav.active.style}
+    ${({ active, theme: { components: { core: { tab } } } }) => {
+        let styles = []
+
+        styles.push(tab.nav.style)        
+        active && styles.push(tab.nav.active.style)
+
+        return styles
+    }}
 `
 
 export const STabIcon = styled.span`

@@ -15,7 +15,7 @@ export const SDrawer = styled.div<ISDrawer>`
     opacity: 0;
     left: 8.3rem;
 
-    ${({ theme: { layout: { drawer } } }) => drawer.style}
+    ${({ theme: { components: { core: { drawer } } } }) => drawer.style}
     
     ${({ open }) => open ? `
         opacity: 1; 
@@ -35,5 +35,5 @@ export const STitleDrawer = styled.div`
     font-size: 0.7rem;
     font-weight: 600;
 
-    ${({ theme: { layout: { drawer } } }) => drawer.title.style}
+    ${({ theme: { components: { core: { drawer } } } }) => drawer.title.style}
 `

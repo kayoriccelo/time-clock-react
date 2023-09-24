@@ -10,5 +10,5 @@ export const SSidebar = styled.div`
     display: flex;
     flex-direction: column;
     
-    ${({ theme: { layout: { sideBar } } }) => sideBar.style}
+    ${({ theme: { components: { layout: { sideBar } } } }) => sideBar.style}
 `

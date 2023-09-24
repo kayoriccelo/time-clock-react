@@ -6,4 +6,6 @@ export const SMain = styled.div`
     display: flex;
     height: 100vh;
     flex-direction: column;
+
+    ${({ theme: { components: { layout: { main } } } }) => main.style}
 `

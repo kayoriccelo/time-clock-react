@@ -10,5 +10,5 @@ export const SSlogan = styled.div`
     height: 6rem;
     border-radius: 0.25rem; 
 
-    ${({ theme: { slogan } }) => slogan.style}
+    ${({ theme: { components: { core: { slogan } } } }) => slogan.style}
 `

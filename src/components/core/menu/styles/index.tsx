@@ -22,8 +22,12 @@ export const SMenuLink = styled(Link) <ISMenu>`
     font-size: 0.7rem;
     font-weight: 600;
     
-    ${({ theme: { layout: { menu } } }) => menu.link.style}
-    ${({ theme: { layout: { menu } } }) => menu.style}
+    ${({ theme: { components: { core: { menu } } } }) => {
+        return [
+            menu.link.style,
+            menu.style
+        ]
+    }}
 `
 
 
@@ -46,6 +50,10 @@ export const SMenuButton = styled.button<ISMenu>`
     font-size: 0.7rem;
     font-weight: 600;
     
-    ${({ theme: { layout: { menu } } }) => menu.button.style}
-    ${({ theme: { layout: { menu } } }) => menu.style}
+    ${({ theme: { components: { core: { menu } } } }) => {
+        return [
+            menu.button.style,
+            menu.style
+        ]
+    }}
 `

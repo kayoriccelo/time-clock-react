@@ -41,5 +41,5 @@ export const STitle = styled.div`
         }
     }
 
-    ${({ theme: { layout: { title } } }) => title.style}
+    ${({ theme: { components: { core: { title } } } }) => title.style}
 `

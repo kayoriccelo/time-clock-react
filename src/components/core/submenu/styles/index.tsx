@@ -18,5 +18,5 @@ export const SSubMenu = styled(Link) <ISSubMenu>`
     font-size: 0.7rem;
     font-weight: 600;
     
-    ${({ theme: { layout: { submenu } } }) => submenu.style}
+    ${({ theme: { components: { core: { submenu } } } }) => submenu.style}
 `
