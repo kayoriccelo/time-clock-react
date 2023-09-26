@@ -16,8 +16,16 @@ export const SBreadcrumbIcon = styled.span`
     align-items: center;
 `
 
-export const SBreadcrumbLabel = styled.span` 
+export const SBreadcrumbLabel = styled.button` 
     display: flex; 
     align-items: center;
     padding: 0.15rem;
+    border: none;
+    transition: 0.6s;
+    background-color: transparent;
+    cursor: pointer;
+    
+    &:hover {
+        ${({ theme: { components: { core: { breadcrumb } } } }) => breadcrumb.label.hover.style}
+    }
 `
