@@ -18,7 +18,7 @@ export const SBreadcrumb = styled.div`
 `
 
 export const SBreadcrumbGroup = styled.div`
-    display: 'flex';
+    display: flex;
 `
 
 export const SBreadcrumbIcon = styled.span` 
