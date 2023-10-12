@@ -3,9 +3,11 @@ import {
     MdKeyboardArrowLeft, MdKeyboardArrowRight, MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight
 } from "react-icons/md"
 
+import { IEvent } from "../../../common/interfaces"
 
-import { SPageSelect, SPageGroup, SPageButton, SPageInput, SPageOption } from "./styles"
-import { IPagination } from "./interface"
+import { SPagination } from "./styles"
+import { IPagination } from "./interfaces"
+import { PaginationButton, PaginationInput, PaginationSelect } from "./components"
 
 
 export function Pagination({ data, handlerPagination }: IPagination) {
@@ -19,6 +21,15 @@ export function Pagination({ data, handlerPagination }: IPagination) {
         }
     }, [data])
 
+
+    useEffect(() => {
+        if (pageCount == 0) {
+            const content = document.getElementById('time-clock-content')
+
+            content && (content.scrollTop = content.scrollHeight)
+        }
+    }, [pageCount])
+
     function handlerPage(newPage: number) {
         if (newPage <= pageCount) {
             setPage(newPage)
@@ -27,7 +38,9 @@ export function Pagination({ data, handlerPagination }: IPagination) {
         }
     }
 
-    function handlerPageSize(newPageSize: number) {
+    function handlerPageSize(event: any) {
+        const newPageSize = Number(event.currentTarget.value)
+
         setPage(1)
         setPageSize(newPageSize)
 
@@ -35,61 +48,58 @@ export function Pagination({ data, handlerPagination }: IPagination) {
     }
 
     return (
-        <SPageGroup>
-            <SPageButton
+        <SPagination>
+            <PaginationButton
                 disabled={page == 1}
                 onClick={() => handlerPage(1)}
             >
                 <MdKeyboardDoubleArrowLeft size={18} />
-            </SPageButton>
+            </PaginationButton>
 
-            <SPageButton
+            <PaginationButton
+                hiddenMobile={true}
                 disabled={page - 2 <= 0}
                 onClick={() => handlerPage(page - 2)}
             >
                 {page - 2 <= 0 ? '--' : page - 2}
-            </SPageButton>
+            </PaginationButton>
 
-            <SPageButton
+            <PaginationButton
                 disabled={page - 1 <= 0}
                 onClick={() => handlerPage(page - 1)}
             >
                 <MdKeyboardArrowLeft size={18} />
-            </SPageButton>
+            </PaginationButton>
 
-            <SPageInput
+            <PaginationInput
                 disabled={pageCount == 1}
                 value={page}
-                onChange={event => handlerPage(Number(event.currentTarget.value))}
+                onChange={(event: IEvent) => handlerPage(Number(event.currentTarget.value))}
             />
 
-            <SPageButton
+            <PaginationButton
                 disabled={page + 1 > pageCount}
                 onClick={() => handlerPage(page + 1)}
             >
                 <MdKeyboardArrowRight size={18} />
-            </SPageButton>
+            </PaginationButton>
 
-            <SPageButton
+            <PaginationButton
+                hiddenMobile={true}
                 disabled={page + 2 > pageCount}
                 onClick={() => handlerPage(page + 2)}
             >
                 {page + 2 > pageCount ? '--' : page + 2}
-            </SPageButton>
+            </PaginationButton>
 
-            <SPageButton
+            <PaginationButton
                 disabled={page == pageCount}
                 onClick={() => handlerPage(pageCount)}
             >
                 <MdKeyboardDoubleArrowRight size={18} />
-            </SPageButton>
+            </PaginationButton>
 
-            <SPageSelect onChange={event => handlerPageSize(Number(event.currentTarget.value))}>
-                <SPageOption value={10}>10</SPageOption>
-                <SPageOption value={20}>20</SPageOption>
-                <SPageOption value={50}>50</SPageOption>
-                <SPageOption value={1000}>1000</SPageOption>
-            </SPageSelect>
-        </SPageGroup>
+            <PaginationSelect handlerPageSize={handlerPageSize} />
+        </SPagination>
     )
 }

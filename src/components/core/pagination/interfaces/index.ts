@@ -1,5 +1,5 @@
 
 export interface IPagination {
-    data: { totalRecords: number },
+    data: { totalRecords: number }
     handlerPagination: (newpage: number, newPageSize: number) => void
 }
