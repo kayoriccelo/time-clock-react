@@ -4,7 +4,7 @@ import { TbPointFilled } from "react-icons/tb"
 
 import { GlobalContext } from "../../../pages/app/contexts"
 
-import { SBreadcrumb, SBreadcrumbIcon, SBreadcrumbLabel } from "./styles/styled"
+import { SBreadcrumb, SBreadcrumbGroup, SBreadcrumbIcon, SBreadcrumbLabel } from "./styles"
 
 
 export function Breadcrumb() {
@@ -24,22 +24,20 @@ export function Breadcrumb() {
 
     return (
         <SBreadcrumb>
-            {breadcrumbs && breadcrumbs.map((breadcrumb, index) => {
-                return (
-                    <div key={`bf-${index}`} style={{ display: 'flex' }}>
-                        <SBreadcrumbIcon key={`sb-icon-${index}`}>
-                            <TbPointFilled key={`b-icon-${index}`} />
-                        </SBreadcrumbIcon>
+            {breadcrumbs && breadcrumbs.map((breadcrumb, index) => (
+                <SBreadcrumbGroup key={`sbg-${index}`}>
+                    <SBreadcrumbIcon key={`sb-icon-${index}`}>
+                        <TbPointFilled key={`b-icon-${index}`} />
+                    </SBreadcrumbIcon>
 
-                        <SBreadcrumbLabel
-                            key={`sb-label-${index}`}
-                            onClick={() => handlerClick(breadcrumb)}
-                        >
-                            {breadcrumb.title}
-                        </SBreadcrumbLabel>
-                    </div>
-                )
-            })}
+                    <SBreadcrumbLabel
+                        key={`sb-label-${index}`}
+                        onClick={() => handlerClick(breadcrumb)}
+                    >
+                        {breadcrumb.title}
+                    </SBreadcrumbLabel>
+                </SBreadcrumbGroup>
+            ))}
         </SBreadcrumb>
     )
 }

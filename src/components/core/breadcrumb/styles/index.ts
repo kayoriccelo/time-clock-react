@@ -9,6 +9,16 @@ export const SBreadcrumb = styled.div`
     border-bottom-left-radius: 4px;
 
     ${({ theme: { components: { core: { breadcrumb } } } }) => breadcrumb.style}
+
+    transition: all 0.10s ease-out;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+`
+
+export const SBreadcrumbGroup = styled.div`
+    display: 'flex';
 `
 
 export const SBreadcrumbIcon = styled.span` 
