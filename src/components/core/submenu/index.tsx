@@ -6,20 +6,26 @@ import { ISubMenu } from "./interfaces"
 import { SSubMenu } from "./styles"
 
 
-export function SubMenu({ title, to, icon, open, breadcrumbs, handleOpen }: ISubMenu) {
+export function SubMenu({
+    label, title, to, icon, open, breadcrumbs, handlerOpen
+}: ISubMenu) {
     const { global, setGlobal } = useContext(GlobalContext)
 
     function handleClick() {
-        handleOpen && handleOpen(!open)
+        handlerOpen && handlerOpen(!open)
 
-        setGlobal({ ...global, title: title, breadcrumbs: breadcrumbs })
+        setGlobal({
+            ...global,
+            title: title ? title : global.title,
+            breadcrumbs: breadcrumbs ? breadcrumbs : global.breadcrumbs
+        })
     }
 
     return (
         <SSubMenu to={to} onClick={handleClick}>
             {icon && icon}
 
-            {title && title}
+            {label && label}
         </SSubMenu>
     )
 }

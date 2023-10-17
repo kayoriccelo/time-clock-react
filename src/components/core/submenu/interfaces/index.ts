@@ -4,10 +4,11 @@ import { IBreadcrumb } from "../../../core/breadcrumb/interfaces"
 
 
 export interface ISubMenu {
-    title: string,
+    title?: string,
+    label: string,
     icon: ReactNode,
     to: string,
     open: boolean,
     breadcrumbs: Array<IBreadcrumb>,
-    handleOpen: (open: boolean) => void,
+    handlerOpen: (open: boolean) => void,
 }
