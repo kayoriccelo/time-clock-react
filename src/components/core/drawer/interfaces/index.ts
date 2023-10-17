@@ -1,7 +1,7 @@
+import { ReactNode } from "react"
+
 
 export interface IDrawer {
-    submenus?: any,
-    titleMenu?: string,
+    children: ReactNode,
     open: boolean,
-    handleOpen: (open: boolean) => void,
 }

@@ -5,16 +5,17 @@ import { ISDrawer } from "./interfaces"
 
 export const SDrawer = styled.div<ISDrawer>`
     position: absolute;
+    display: flex;
     flex-direction: column;
     margin: 5.6rem 0.75rem;
-    width: 0;
     height: calc(100vh - 8.5rem);
+    width: 0;
     z-index: 99999;
-    transition: all .60s ease;  
-    display: flex;
     opacity: 0;
+    top: 0;
     left: 8.3rem;
-
+    transition: all .60s ease;  
+    
     ${({ theme: { components: { core: { drawer } } } }) => drawer.style}
     
     ${({ open }) => open ? `
@@ -24,6 +25,22 @@ export const SDrawer = styled.div<ISDrawer>`
         opacity: 0;
         width: 0rem;
     `}
+
+    @media (max-width: 600px) {
+        background-color: white;
+        width: 100vw;
+        margin: 0;
+        left: 0;
+        transition: all .30s ease;
+
+        ${({ open }) => open ? `
+            opacity: 1; 
+            height: calc(100vh);
+        ` : `
+            opacity: 0;
+            height: 0;
+        `}
+    }
 `
 
 export const STitleDrawer = styled.div`
@@ -36,4 +53,9 @@ export const STitleDrawer = styled.div`
     font-weight: 600;
 
     ${({ theme: { components: { core: { drawer } } } }) => drawer.title.style}
+
+    @media (max-width: 600px) {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
 `
