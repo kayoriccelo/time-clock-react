@@ -4,12 +4,18 @@ import { IBreadcrumb } from "../../../core/breadcrumb/interfaces"
 
 
 export interface IMenu {
-    title: string,
+    title?: string,
+    label: string,
     icon: ReactNode,
     to?: string,
     open: boolean,
     breadcrumbs?: Array<IBreadcrumb>,
-    handleOpen?: (open: boolean) => void,
-    handleSubMenus?: () => void,
-    submenus?: any
+    handlerOpen?: (open: boolean) => void,
+    handlerSubMenus?: () => void,
+    submenus?: any;
+    children?: ReactNode;
+}
+
+export interface IMenuGroup {
+    children: ReactNode
 }
