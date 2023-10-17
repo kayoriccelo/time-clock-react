@@ -1,4 +1,6 @@
 
 export interface ISButton {
-    type?: string,
+    type?: "success" | "primary" | "warning" |  "danger" | "secondary",
+    outline?: Boolean,
+    hint?: String,
 }
