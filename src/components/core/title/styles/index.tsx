@@ -42,4 +42,13 @@ export const STitle = styled.div`
     }
 
     ${({ theme: { components: { core: { title } } } }) => title.style}
+
+    transition: all 0.10s ease-out;
+
+    @media (max-width: 600px) {
+        max-width: 100vh;
+        margin: 1rem;
+        justify-content: center;
+    }
+
 `
