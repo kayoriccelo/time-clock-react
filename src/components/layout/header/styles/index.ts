@@ -8,6 +8,15 @@ export const SHeader = styled.div`
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
     display: flex;
+    align-items: center;
+    transition: all 0.10s ease-out;
 
     ${({ theme: { components: { layout: { header } } } }) => header.style}
+
+    @media (max-width: 600px) {
+        margin: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        box-shadow: none;
+    }
 `

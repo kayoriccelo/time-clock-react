@@ -7,8 +7,13 @@ export const SSidebar = styled.div`
     width: 7rem;
     border-top-right-radius: 0.33rem;
     border-top-left-radius: 0.33rem;
-    display: flex;
-    flex-direction: column;
-    
+    transition: all 0.10s ease-out;
+
     ${({ theme: { components: { layout: { sideBar } } } }) => sideBar.style}
+
+    @media (max-width: 600px) {
+        width: 0;
+        padding: 0;
+        margin: 0;
+    }
 `
