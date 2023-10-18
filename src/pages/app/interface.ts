@@ -2,13 +2,13 @@
 export interface IGlobal {
 	title: string,
 	breadcrumbs: Array<{
-        to: string,
+		to: string,
 		title: string
 	}>,
 	theme: {},
 }
 
 export interface IGlobalContext {
-    global: IGlobal,
-    handlerGlobal: (newGlobal: IGlobal) => void
+	global: IGlobal,
+	setGlobal: (newGlobal: IGlobal) => void
 }

@@ -1,16 +1,10 @@
-import { useContext } from "react"
-
-import { IMain } from "./interface"
-import { SMain } from "./style/styled"
-import { GlobalContext } from "../../../pages/app/context"
+import { IMain } from "./interfaces"
+import { SMain } from "./styles"
 
 
 export function Main({ children }: IMain) {
-    const { global } = useContext(GlobalContext)
-    const { theme } = global
-
     return (
-        <SMain theme={theme}>
+        <SMain>
             {children}
         </SMain>
     )

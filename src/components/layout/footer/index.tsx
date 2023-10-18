@@ -1,15 +1,9 @@
-import { useContext } from "react"
-
-import { SFooter } from "./style/styled"
-import { GlobalContext } from "../../../pages/app/context"
+import { SFooter } from "./styles"
 
 
 export function Footer() {
-    const { global } = useContext(GlobalContext)
-    const { theme } = global
-
     return (
-        <SFooter theme={theme}>
+        <SFooter>
             SDO Technology Ltda © 2023. All rights reserved.
         </SFooter>
     )
