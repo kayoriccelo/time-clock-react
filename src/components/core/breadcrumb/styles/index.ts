@@ -3,8 +3,7 @@ import { styled } from "styled-components"
 
 export const SBreadcrumb = styled.div`
     display: flex;
-    margin: 0 0 0.6rem 0;
-    padding: 0.4rem;
+    padding: 0 0.2rem;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 
