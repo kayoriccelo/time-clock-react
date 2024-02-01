@@ -1,4 +1,4 @@
-import { IGlobal } from "./interface"
+import { IGlobal } from "../interfaces"
 
 
 export function getLocalStorage(global: IGlobal) {

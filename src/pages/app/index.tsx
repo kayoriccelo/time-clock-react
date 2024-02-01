@@ -1,44 +1,44 @@
 import { useEffect, useState } from "react"
 import { RouterProvider } from "react-router-dom"
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from "styled-components"
 
-import { routers } from "./routes"
 import { light } from "../../common/theme/styled"
-import { GlobalContext } from "./context"
-import { getLocalStorage, setLocalStorage } from "./storage"
-import { IGlobal } from "./interface"
 
+import { routers } from "./configs/routes"
+import { GlobalContext } from "./contexts"
+import { getLocalStorage, setLocalStorage } from "./configs/storage"
+import { IGlobal } from "./interfaces"
 
 function App() {
-	const [ global, useGlobal ] = useState<IGlobal>({
-		title: 'Home',
-		breadcrumbs: [{ to: '/', title: 'Home'}],
-		theme: light
-	})
-	
-	function setGlobal (newGlobal: IGlobal) {
-		setLocalStorage(newGlobal)
+    const [global, useGlobal] = useState<IGlobal>({
+        title: "Home",
+        breadcrumbs: [{ to: "/", title: "Home" }],
+        theme: light,
+        idCompany: 1,
+    })
 
-		useGlobal({ ...global, ...newGlobal})
-	}
+    function setGlobal(newGlobal: IGlobal) {
+        setLocalStorage(newGlobal)
 
-	useEffect(() => {
-		const newGlobal = getLocalStorage(global)
+        useGlobal({ ...global, ...newGlobal })
+    }
 
-		setGlobal(newGlobal)
-	}, [])
+    useEffect(() => {
+        const newGlobal = getLocalStorage(global)
 
-	return (
-		<GlobalContext.Provider value={{ global, setGlobal }}>
-			<ThemeProvider theme={light}>
-				<RouterProvider
-					router={routers}
-					fallbackElement={<p>Initial Load...</p>}
-				/>
-			</ThemeProvider>
-		</GlobalContext.Provider>
-	)
+        setGlobal(newGlobal)
+    }, [])
+
+    return (
+        <GlobalContext.Provider value={{ global, setGlobal }}>
+            <ThemeProvider theme={light}>
+                <RouterProvider
+                    router={routers}
+                    fallbackElement={<p>Initial Load...</p>}
+                />
+            </ThemeProvider>
+        </GlobalContext.Provider>
+    )
 }
-
 
 export default App
