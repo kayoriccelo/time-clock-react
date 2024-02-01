@@ -3,7 +3,8 @@ import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io"
 
 import { INoRecordsFound, ITable, ITableFieldOrder, ITableHeadColumn } from "./interfaces"
 import {
-    STable, STableBody, STableBodyColumn, STableBodyRow, STableHead, STableHeadColumn, STableHeadRow, STableOrder
+    STable, STableBody, STableBodyColumn, STableBodyRow, STableContent, STableHead, STableHeadColumn, STableHeadRow,
+    STableOrder, STableScroller
 } from "./styles"
 
 
@@ -41,7 +42,7 @@ function TableHeadColumn({ field, key, handlerOrders }: ITableHeadColumn) {
             size={field.size}
             align={field.align}
         >
-            <STableOrder align={field.align} onClick={() => handlerOrder()}>
+            <STableOrder align={field.align} size={field.size} onClick={() => handlerOrder()}>
                 {field.label}
 
                 {orderColumn.order == 'asc' && <IoMdArrowDropdown size={18} style={{ marginLeft: 10 }} />}
@@ -77,37 +78,41 @@ export function Table({ fields, data, handlerOrdernable }: ITable) {
     }
 
     return (
-        <STable>
-            <STableHead>
-                <STableHeadRow>
-                    {fields.map((field, index) => (
-                        <TableHeadColumn
-                            key={`sTable-hc-${index}`}
-                            field={field}
-                            handlerOrders={handlerOrders}
-                        />
-                    ))}
-                </STableHeadRow>
-            </STableHead>
-
-            <STableBody>
-                {data.length > 0
-                    ? data.map((item, index) => (
-                        <STableBodyRow key={`sTable-br-${index}`}>
+        <STableContent>
+            <STableScroller>
+                <STable>
+                    <STableHead>
+                        <STableHeadRow>
                             {fields.map((field, index) => (
-                                <STableBodyColumn
-                                    key={`sTable-bc-${index}`}
-                                    size={field.size}
-                                    align={field.align}
-                                >
-                                    {field.name ? item[field.name] : field.render}
-                                </STableBodyColumn>
+                                <TableHeadColumn
+                                    key={`sTable-hc-${index}`}
+                                    field={field}
+                                    handlerOrders={handlerOrders}
+                                />
                             ))}
-                        </STableBodyRow>
-                    ))
-                    : <NoRecordsFound colspan={fields.length} />
-                }
-            </STableBody>
-        </STable>
+                        </STableHeadRow>
+                    </STableHead>
+
+                    <STableBody>
+                        {data.length > 0
+                            ? data.map((item, index) => (
+                                <STableBodyRow key={`sTable-br-${index}`}>
+                                    {fields.map((field, index) => (
+                                        <STableBodyColumn
+                                            key={`sTable-bc-${index}`}
+                                            size={field.size}
+                                            align={field.align}
+                                        >
+                                            {field.render ? field.render(item) : item[field.name]}
+                                        </STableBodyColumn>
+                                    ))}
+                                </STableBodyRow>
+                            ))
+                            : <NoRecordsFound colspan={fields.length} />
+                        }
+                    </STableBody>
+                </STable>
+            </STableScroller>
+        </STableContent>
     )
 }
