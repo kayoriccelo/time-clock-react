@@ -23,6 +23,9 @@ import { Search } from "./core/search"
 import { Table } from "./core/table"
 import { Pagination } from "./core/pagination"
 import { Drawer } from "./core/drawer"
+import { Modal } from "./core/modal"
+import { SweetAlert } from "./core/sweetalert"
+import { Row } from "./core/row"
 
 
 export {
@@ -52,5 +55,8 @@ export {
     Tab,
     Search,
     Table,
-    Pagination
+    Pagination,
+    Modal,
+    SweetAlert,
+    Row
 }
