@@ -1,6 +1,6 @@
 import 'styled-components'
 
-import { light } from '../../common/theme/styled'
+import { light } from '../../../common/theme/styled'
 
 
 type ThemeTypes = typeof light

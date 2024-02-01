@@ -6,9 +6,5 @@ export interface IGlobal {
 		title: string
 	}>,
 	theme: {},
-}
-
-export interface IGlobalContext {
-	global: IGlobal,
-	setGlobal: (newGlobal: IGlobal) => void
+	idCompany: number,
 }
