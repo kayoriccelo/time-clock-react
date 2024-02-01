@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import { STab, STabContent, STabGroup, STabIcon, STabNav } from "./styles"
+import { STab, STabContent, STabGroup, STabIcon, STabNav, STabNavGroup } from "./styles"
 import { ITabContent, ITabNav, ITab } from "./interfaces"
 
 
@@ -17,7 +17,7 @@ export function Tab({ tabs, tabActiveInitial }: ITab) {
 
     return (
         <STab>
-            <STabGroup>
+            <STabNavGroup>
                 {tabs.map((item, index) => (
                     <TabNav
                         key={`tab-nav-${index}`}
@@ -27,7 +27,7 @@ export function Tab({ tabs, tabActiveInitial }: ITab) {
                         {item.icon && item.icon} <STabIcon key={`stab-icon-${index}`}>{item.label}</STabIcon>
                     </TabNav>
                 ))}
-            </STabGroup>
+            </STabNavGroup>
 
             <STabGroup>
                 {tabs.map((item, index) => (
