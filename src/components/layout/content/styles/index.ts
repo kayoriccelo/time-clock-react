@@ -5,11 +5,10 @@ export const SContent = styled.div`
     margin-bottom: 0.6rem;
     padding-right: 0.3rem;
     height: 100%;
-    min-height: calc(100vh - 7rem);
     overflow-x: auto;
 
     &::-webkit-scrollbar {
-        width: 0.3rem;
+        width: 0.7rem;
     }
     
     &::-webkit-scrollbar-thumb {

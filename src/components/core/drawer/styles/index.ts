@@ -13,7 +13,7 @@ export const SDrawer = styled.div<ISDrawer>`
     z-index: 99999;
     opacity: 0;
     top: 0;
-    left: 8.3rem;
+    left: 8.5rem;
     transition: all .60s ease;  
     
     ${({ theme: { components: { core: { drawer } } } }) => drawer.style}

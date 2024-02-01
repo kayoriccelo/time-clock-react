@@ -4,7 +4,7 @@ import { SContent } from "./styles"
 
 export function Content ({ children }: IContent) {
     return (
-        <SContent>
+        <SContent id="time-clock-content">
             {children}
         </SContent>
     )

@@ -26,7 +26,7 @@ export const SListHeaderAction = styled.div`
 `
 
 export const SListContent = styled.div`
-    min-height: calc(100vh - 28rem);
+    min-height: calc(100vh - 28.8rem);
     width: 100%;
     overflow-y: auto;
 
