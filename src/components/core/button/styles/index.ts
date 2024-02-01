@@ -55,9 +55,10 @@ export const SButtonSpan = styled.span`
     justify-content: center;
     align-items: center;
     width: fit-content;
-    height: fit-content;
+    height: 1.5rem;
     transition: all 200ms;
     padding: 0.2rem;
+    cursor: pointer;
     &:hover {
         transform: scale(.9);
         opacity: .75;
@@ -74,6 +75,7 @@ export const SButtonIcon = styled.div`
     justify-content: center;
     height: 100%;
     width: 100%;
+    cursor: pointer;
 `
 
 export const SButtonText = styled.label`
@@ -82,6 +84,7 @@ export const SButtonText = styled.label`
     justify-content: center;
     text-align: center;
     margin-left: 0.3rem;
+    cursor: pointer;
 
     ${({ theme: { components: { core: { button } } } }) => button.style}
 `
