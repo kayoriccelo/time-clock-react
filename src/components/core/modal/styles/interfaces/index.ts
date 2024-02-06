@@ -5,5 +5,6 @@ export interface ISModal {
 }
 
 export interface ISModalContainer {
+    open: Boolean,
     size: String,
 }

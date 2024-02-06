@@ -7,7 +7,7 @@ import { SModal, SModalContainer, SModalHeader, SModalBody, SModalFooter, SModal
 export function Modal({ open, onClose, header, body, footer, size = 'normal' }: IModal) {
     return (
         <SModal open={open}>
-            <SModalContainer size={size}>
+            <SModalContainer open={open} size={size}>
                 <SModalHeader>
                     {header}
 
